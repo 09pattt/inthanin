@@ -1,0 +1,160 @@
+@font-face {
+  font-family: 'DB';
+  src: url('../fonts/DB Heavent.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'DB';
+  src: url('../fonts/DB Heavent Bd.ttf');
+  font-weight: bold;
+}
+
+/*Define value for variables*/
+:root {
+  --c-w1: #ffffff;
+  --c-w2: #f8f8f8;
+  --c-w3: #f0f0f0;
+  --c-w4: #eaeaea;
+  --c-t1-w1: #ffffffa0;
+  --c-t2-w1: #ffffff80;
+  --c-t3-w1: #ffffff40;
+
+  --c-gr1: #404040;
+  --c-gr2: #606060;
+  --c-gr3: #808080;
+  --c-gr4: #a0a0a0;
+  --c-t1-gr1: #808080a0;
+  --c-t2-gr1: #80808080;
+  --c-t3-gr1: #80808040;
+
+  --c-bl1: #181818;
+  --c-bl2: #222222;
+  --c-bl3: #282828;
+  --c-t1-bl1: #181818a0;
+  --c-t2-bl1: #18181880;
+  --c-t3-bl1: #18181840;
+
+  --c-p1: #C060C0;
+  --c-p2: #A040A0;
+  --c-p3: #602560;
+  --c-t1-p2: #a040a0a0;
+  --c-t2-p2: #a040a080;
+  --c-t3-p2: #a040a040;
+
+  --c-y1: #ffaa00;
+  --c-t1-y1: #ffaa00a0;
+
+  --c-b1: #0080ff;
+  --c-t1-b1: #0080ffa0;
+
+  --c-r1: #ff6060;
+  --c-t1-r1: #ff6060a0;
+
+  --c-g1: #60a060;
+  --c-t1-g1: #60a060a0;
+
+
+  --s-page-w: 100dvw;
+  --s-page-h: 100dvh;
+
+
+  --f-family-a1: 'DB';
+
+  --f-size-1: 20px;
+  --f-size-2: 24px;
+
+  --ft-blur-1: blur(1rem);
+  --ft-blur-2: blur(2rem);
+}
+
+/* Assign value variables to element variables (prefers-color-scheme: light)*/
+:root {
+  --c-border: var(--c-p1);
+  --c-text-heading: var(--c-p1);
+  --c-a: var(--c-p1);
+  --c-a-bg: var(--c-t3-p2);
+
+  --f-size: var(--f-size-1);
+
+  --ft-blur: var(--ft-blur-1);
+
+
+  --c-main-bg1: var(--c-w4);
+  --c-main-bg2: var(--c-w3);
+  --c-main-bg3: var(--c-w2);
+  --c-text: var(--c-bl1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --c-main-bg1: var(--c-bl2);
+    --c-main-bg2: var(--c-bl3);
+    --c-main-bg3: var(--c-gr1);
+    --c-text: var(--c-w3);
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --f-size: var(--f-size-2);
+    --ft-blur: var(--ft-blur-2);
+  }
+}
+
+@media (hover: hover) {
+  a:hover {
+    background: var(--c-t3-p2);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background: var(--c-t2-p2);
+  color: var(--c-w1);
+}
+
+a::selection {
+  color: var(--c-y1);
+}
+
+body {
+  min-height: 100vh;
+  color: var(--c-text);
+  background: var(--c-bl1);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-family:
+    var(--f-family-a1),
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: var(--f-size);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--c-a);
+  text-decoration: none;
+  transition: background-color 250ms;
+}

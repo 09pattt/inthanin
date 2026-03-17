@@ -1,0 +1,10 @@
+@import 'base.css';
+
+.heading {
+    color: var(--c-text-heading);
+}
+
+.center_text {
+    display: block;
+    text-align: center;
+}

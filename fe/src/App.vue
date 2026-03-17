@@ -1,47 +1,41 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import NavigationTab from "@/components/NavigationTab.vue";
+import MainSpace from "@/components/MainSpace.vue";
+import Footer from "@/components/Footer.vue";
+import { ref, onMounted } from 'vue';
+
+const navHeight = ref(0);
+
+const handleUpdateHeight = (height: number) => {
+  navHeight.value = height;
+}
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <div ref="navbar">
+    <NavigationTab @updateHeight="handleUpdateHeight"></NavigationTab>
+  </div>
+  <MainSpace :topGap="navHeight">
+    <h1 class="heading center_text">หน้าพัฒนาเว็บไซต์</h1>
+    <h2 class="center_text">ข้อมูลสำหรับ Debug</h2>
+    <strong class="center_text">navHeight: {{navHeight}}</strong>
+    <iframe src="https://pale-caper-4d8.notion.site/ebd//2fa4bd3c35668064b67aed25486782a3" width="100%" height="600" frameborder="0" allowfullscreen />
+    <p>Hello world</p>
+    <p>Hello world</p>
+    <p>Hello world</p>
+    <p>Hello world</p>
+    <p>Hello world</p>
+    <p>Hello world</p>
+    <p>Hello world</p>
+  </MainSpace>
+  <Footer></Footer>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
+ iframe {
+   width: 100%;
+   max-height: 75dvh;
+   border-radius: 1rem;
+   filter: drop-shadow(1rem 1rem 1rem var(--c-t2-bl1));
+ }
 </style>
