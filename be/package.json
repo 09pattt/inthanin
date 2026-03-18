@@ -2,7 +2,7 @@
   "name": "inthanin_be",
   "version": "1.0.0",
   "description": "Inthanin team backend software. Developed by Napat Tosawat",
-  "license": "ISC",
+  "license": "MIT",
   "author": "Vaywind",
   "type": "commonjs",
   "main": "index.js",

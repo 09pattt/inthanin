@@ -63,21 +63,22 @@
 
   --f-size-1: 20px;
   --f-size-2: 24px;
-
-  --ft-blur-1: blur(1rem);
-  --ft-blur-2: blur(2rem);
 }
 
 /* Assign value variables to element variables (prefers-color-scheme: light)*/
 :root {
   --c-border: var(--c-p1);
   --c-text-heading: var(--c-p1);
+  --c-text-comment: var(--c-gr3);
   --c-a: var(--c-p1);
   --c-a-bg: var(--c-t3-p2);
 
   --f-size: var(--f-size-1);
 
-  --ft-blur: var(--ft-blur-1);
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
 
 
   --c-main-bg1: var(--c-w4);
@@ -98,7 +99,11 @@
 @media (min-width: 1024px) {
   :root {
     --f-size: var(--f-size-2);
-    --ft-blur: var(--ft-blur-2);
+
+    --space-1: 1rem;
+    --space-2: 2rem;
+    --space-3: 3rem;
+    --space-4: 4rem;
   }
 }
 
@@ -114,6 +119,12 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
 }
 
 ::selection {
@@ -126,7 +137,8 @@ a::selection {
 }
 
 body {
-  min-height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
   color: var(--c-text);
   background: var(--c-bl1);
   transition:

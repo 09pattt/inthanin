@@ -8,28 +8,22 @@ defineProps({
 </script>
 
 <template>
-  <div id="ground">
-    <div id="nav_spacer"></div>
-    <div id="content">
-      <slot></slot>
-    </div>
+  <div class="ground">
+    <div class="nav_spacer"></div>
+    <slot></slot>
   </div>
 </template>
 
 <style scoped>
-  #ground {
+  .ground {
     width: 100%;
-    height: fit-content;
-    min-height: 100%;
+    min-width: fit-content;
+    height: 100%;
+    min-height: 100dvh;
     background-color: var(--c-main-bg1);
   }
 
-  #nav_spacer {
+  .nav_spacer {
     height: v-bind(topGap + 'px');
-  }
-
-  #content {
-    margin: 0 auto;
-    padding: 10px;
   }
 </style>

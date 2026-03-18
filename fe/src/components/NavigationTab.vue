@@ -1,5 +1,9 @@
 <script setup>
 import {onMounted, ref} from "vue"
+import {useRoute} from "vue-router"
+
+const route = useRoute()
+
 const emit = defineEmits(["updateHeight"])
 const navbar = ref(null)
 
@@ -14,7 +18,7 @@ onMounted(() => {
   <nav ref="navbar">
     <div id="mobile_nav_space">
       <div id="title_space">
-        <img src="/images/logo/inthaneer.svg" alt="">
+        <img src="/images/logo/inthanin.png" alt="">
         <p>INTHANIN</p>
       </div>
       <div id="menu_hub">
@@ -32,7 +36,7 @@ onMounted(() => {
     <div id="path_bar">
       <p>
         คณะสีอินทนิล >>
-        <strong>หน้าแรก</strong>
+        <strong>{{ route.meta.title }}</strong>
       </p>
     </div>
   </nav>
@@ -49,14 +53,14 @@ onMounted(() => {
     top: 0;
     left: 0;
 
-    overflow: visible;
+    overflow: hidden;
   }
 
   #path_bar {
     width: 100%;
     height: fit-content;
     background-color: var(--c-t1-w1);
-    backdrop-filter: var(--ft-blur);
+    backdrop-filter: blur(1rem);
 
     color: var(--c-p3);
     padding: 0 10px;
@@ -72,7 +76,7 @@ onMounted(() => {
     width: 100%;
     height: 50px;
     background-color: var(--c-t1-p2);
-    backdrop-filter: var(--ft-blur);
+    backdrop-filter: blur(1rem);
 
     display: flex;
     justify-content: space-between;

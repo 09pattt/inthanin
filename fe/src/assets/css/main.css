@@ -4,7 +4,15 @@
     color: var(--c-text-heading);
 }
 
-.center_text {
+.comment-text {
+    color: var(--c-text-comment);
+}
+
+.center-text {
     display: block;
     text-align: center;
+}
+
+.join-text {
+    display: inline-block;
 }
