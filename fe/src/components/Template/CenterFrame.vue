@@ -3,28 +3,29 @@ defineProps({
   noCentering: Boolean,
   fullHeight: Boolean,
   relativePosition: Boolean,
-  padding: String
+  padding: String,
+  zIndex: String
 })
 </script>
 
 <template>
-  <div id="content" :class="{
+  <div class="content" :class="{
       'noCentering' : noCentering,
       'fullHeight' : fullHeight,
       'relativePosition' : relativePosition,
-    }" :style="{padding: padding}"
+    }" :style="{padding: padding, zIndex: zIndex}"
   >
-    <slot></slot>
+    <slot/>
   </div>
 </template>
 
 <style scoped>
-#content {
-  width: 100%;
-
+.content {
   margin: 0 auto;
+  width: 100%;
   min-width: 400px;
   max-width: 700px;
+  position: relative;
 }
 
 .noCentering {
@@ -42,7 +43,7 @@ defineProps({
 }
 
 @media (min-width: 1024px) {
-  #content {
+  .content {
     max-width: 1280px;
   }
 }

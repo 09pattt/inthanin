@@ -16,10 +16,11 @@
   .block {
     height: 100%;
     max-height: 100%;
-    width: 240px;
+    width: 250px;
     border-radius: var(--space-1);
     background-color: var(--c-main-bg3);
     overflow: hidden;
+    animation: slideUp 1s;
 
     padding: var(--space-1);
   }

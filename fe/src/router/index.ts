@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Home from "@/pages/Home.vue";
+import Development from "@/pages/Development.vue";
 
 const routes = [
     {
@@ -12,6 +13,13 @@ const routes = [
         component: Home,
         meta: {
             title: 'หน้าหลัก'
+        }
+    },
+    {
+        path: '/development',
+        component: Development,
+        meta: {
+            title: 'การพัฒนา'
         }
     }
 ]

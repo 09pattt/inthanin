@@ -1,6 +1,6 @@
 <script setup>
 import Logo from "@/components/Objects/Logo.vue";
-import ContentFrame from "@/components/Template/ContentFrame.vue";
+import CenterFrame from "@/components/Template/CenterFrame.vue";
 </script>
 
 <script>
@@ -12,7 +12,7 @@ const copyTel = (number) => {
 
 <template>
   <footer>
-    <ContentFrame padding="var(--space-1">
+    <CenterFrame padding="var(--space-1">
       <div style="display: flex; justify-content: center; align-items: center;">
         <h1 class="join-text" style="color: var(--c-p1);">inthanin</h1>
         <h2 class="join-text" style="color: var(--c-gr4);">.xyz</h2>
@@ -36,7 +36,8 @@ const copyTel = (number) => {
       <br>
       <strong class="comment-text center-text">Copyright 2026 Napat Tosawat</strong>
       <p class="comment-text center-text">ภายใต้เงื่อนไขการรักษาลิขสิทธิ์และข้อกำหนดของ MIT License</p>
-    </ContentFrame>
+      <br>
+    </CenterFrame>
   </footer>
 </template>
 
