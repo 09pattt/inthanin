@@ -1,7 +1,5 @@
 # Inthanin
 
-ซอฟต์แวร์และเว็บไซต์ของคณะสีอินทนิลโรงเรียนเตรียมอุดมศึกษาน้อมเกล้า
-
 ### License
 
 เป็นไปตามข้อกำหนดของ MIT License
@@ -14,35 +12,20 @@
 
 #### Framework
 
-**Frontend**
-
 - Vue JS
 
 - Vite
 
-**Backend**
-
 - Node.js
 
-#### Library
+#### Development tools
 
-**Node.js :**
+- Git
+- GitHub
 
-- express
+### Service provider
+ผู้ให้บริการซึ่งอำนวยต่อการเผยแพร่หน้าเว็บและทำงานกับระบบ
 
-- cors
+- Vercel
 
-####
-
-### Organization
-
-**Frontend developers**
-- นายณภัทร โตสวาท
-
-**Backend developers**
-มีหน้าที่ออกแบบสถาปัตยกรรมซอฟต์แวร์ พัฒนาซอฟต์แวร์ ปรับปรุงแก้ไข เพื่อสร้างประสิทธิภาพและความมั่นคงให้ภายในโครงสร้างและประสบการณ์ผู้ใช้ที่ดีที่สุด
-ประกอบด้วยระบบ Routing, Debuging, Authentication, Hashing, Encryption, Cyber-security, SQL-Protection, Validatation เป็นต้น
-- นายณภัทร โตสวาท
-
-**Database developers**
-- นายณภัทร โตสวาท
+`ข้อมูลที่บันทึก ณ วันที่ 23 มีนาคม ค.ศ.2026`

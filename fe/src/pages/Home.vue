@@ -114,7 +114,7 @@ import StatisticsItem from "@/components/Template/StatisticsItem.vue";
           </main>
         </div>
       </div>
-      
+
       <div style="height: 2rem;"></div>
 
     </ContentFrame>
