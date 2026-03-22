@@ -1,9 +1,16 @@
 <script setup>
-import CenterFrame from "@/components/Template/CenterFrame.vue";
+import ContentFrame from "@/components/Template/ContentFrame.vue";
 import { ref, onMounted } from "vue";
 
 defineProps({
-  noCenterFrame: Boolean
+  padding_header: {
+    type: String,
+    default: "var(--space-1)",
+  },
+  padding_main: {
+    type: String,
+    default: "var(--space-1)",
+  },
 })
 
 const main_content = ref(null)
@@ -17,54 +24,74 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="ground">
+  <div class="side_slide_frame">
 
-    <header v-if="noCenterFrame">
-      <slot name="header"/>
-    </header>
-    <header v-else>
-      <CenterFrame>
+    <header>
+      <ContentFrame :padding="padding_header">
         <slot name="header"/>
-      </CenterFrame>
+      </ContentFrame>
     </header>
 
-    <div class="main_content_cover">
-      <main v-if="noCenterFrame">
-        <slot/>
-      </main>
-      <main v-else>
-          <div ref="main_content" style="width: 100%; height:fit-content; overflow-x: scroll; overflow-y: hidden; position: absolute; inset: 0;">
-            <slot/>
-          </div>
-      </main>
+    <div class="component__main_space">
+      <div class="component__main_scroll_space">
+        <ContentFrame :padding="padding_main">
+          <main class="component__main_wrapper">
+            <div ref="main_content" class="component__main_content">
+              <slot/>
+              <div>
+                <!-- Fix spacing problem -->
+              </div>
+            </div>
+          </main>
+        </ContentFrame>
+      </div>
     </div>
 
   </div>
 </template>
 
 <style scoped>
-.ground {
+.side_slide_frame {
   width: 100%;
   height: fit-content;
 }
 
-header {
+.side_slide_frame > header {
   width: 100%;
   height: fit-content;
 }
 
-.main_content_cover {
+.side_slide_frame .component__main_space {
   width: 100%;
   height: fit-content;
   background-color: var(--c-main-bg2);
   filter: drop-shadow(0 var(--space-2) var(--space-2) var(--c-t3-bl1));
-
-  padding: var(--space-1);
 }
 
-main {
+.side_slide_frame .component__main_scroll_space {
+  width: 100%;
+  height: fit-content;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.side_slide_frame .component__main_wrapper {
   width: 100%;
   height: v-bind(main_content_height + 'px');
   position: relative;
 }
+
+.side_slide_frame .component__main_content {
+  height:fit-content;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-y: hidden; /* For starting animation */
+
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-1);
+  flex-wrap: nowrap;
+}
+
 </style>

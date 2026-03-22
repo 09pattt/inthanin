@@ -4,23 +4,30 @@ defineProps({
   fullHeight: Boolean,
   relativePosition: Boolean,
   padding: String,
-  zIndex: String
+  zIndex: String,
+  pointerEvents: String
 })
 </script>
 
 <template>
-  <div class="content" :class="{
-      'noCentering' : noCentering,
-      'fullHeight' : fullHeight,
-      'relativePosition' : relativePosition,
-    }" :style="{padding: padding, zIndex: zIndex}"
+  <div class="app_center_frame"
+       :class="{
+    'noCentering' : noCentering,
+    'fullHeight' : fullHeight,
+    'relativePosition' : relativePosition,
+    }"
+       :style="{
+    padding: padding,
+    zIndex: zIndex,
+    pointerEvents: pointerEvents,
+    }"
   >
     <slot/>
   </div>
 </template>
 
 <style scoped>
-.content {
+.app_center_frame {
   margin: 0 auto;
   width: 100%;
   min-width: 400px;
@@ -28,17 +35,17 @@ defineProps({
   position: relative;
 }
 
-.noCentering {
+.app_center_frame.noCentering {
   margin: 0;
   min-height: auto;
   max-height: none;
 }
 
-.fullHeight {
+.app_center_frame.fullHeight {
   height: 100%;
 }
 
-.relativePosition {
+.app_center_frame.relativePosition {
   position: relative;
 }
 

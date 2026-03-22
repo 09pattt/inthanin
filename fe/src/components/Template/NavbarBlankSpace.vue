@@ -5,7 +5,7 @@ const store = useElementsStore()
 </script>
 
 <template>
-  <div :style="{ height : store.NavbarHeight + 'px'}">
+  <div :style="{ height : store.Navbar?.offsetHeight + 'px'}">
     <slot/>
   </div>
 </template>

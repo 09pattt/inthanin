@@ -1,15 +1,15 @@
 <script setup lang="ts">
 import NavigationTab from "@/components/NavigationTab.vue";
-import Main from "@/components/Main/Main.vue";
+import Content from "@/components/Content.vue";
 import Footer from "@/components/Footer.vue";
 </script>
 
 <template>
   <NavigationTab/>
   <main>
-    <Main>
-      <router-view/>
-    </Main>
+    <Content>
+      <router-view/> <!--App.js COMPLETED REFACTORING. CONTINUE REFACTOR IN COMPONENT 'Home'--> <!--REFACTORING-->
+    </Content>
     <Footer/>
   </main>
 </template>

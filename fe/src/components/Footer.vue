@@ -1,6 +1,6 @@
 <script setup>
 import Logo from "@/components/Objects/Logo.vue";
-import CenterFrame from "@/components/Template/CenterFrame.vue";
+import ContentFrame from "@/components/Template/ContentFrame.vue";
 </script>
 
 <script>
@@ -12,7 +12,7 @@ const copyTel = (number) => {
 
 <template>
   <footer>
-    <CenterFrame padding="var(--space-1">
+    <ContentFrame padding="var(--space-1)">
       <div style="display: flex; justify-content: center; align-items: center;">
         <h1 class="join-text" style="color: var(--c-p1);">inthanin</h1>
         <h2 class="join-text" style="color: var(--c-gr4);">.xyz</h2>
@@ -28,7 +28,7 @@ const copyTel = (number) => {
       <p><strong>อีเมล : </strong><a href="mailto:your@email.com?subject=From inthanin.xyz&body=เรียน นายณภัทร โตสวาท">09pattt@gmail.com</a> หรือ <a href="mailto:your@email.com?subject=From inthanin.xyz&body=เรียน นายณภัทร โตสวาท">26094@tun.ac.th</a></p>
       <br>
       <h2>โรงเรียนเตรียมอุดมศึกษาน้อมเกล้า</h2>
-      <p>78 ถนนรามคำแหง แขวงราษฎร์พัฒนา เขตสะพานสูง จังหวัดกรุงเทพมหานคร 10240</p>
+      <p><strong>ที่อยู่ : </strong>78 ถนนรามคำแหง แขวงราษฎร์พัฒนา เขตสะพานสูง จังหวัดกรุงเทพมหานคร 10240</p>
       <p><strong>เว็บไซต์ : </strong><a href="https://tun.ac.th">@tun.ac.th</a></p>
 
       <br>
@@ -37,7 +37,7 @@ const copyTel = (number) => {
       <strong class="comment-text center-text">Copyright 2026 Napat Tosawat</strong>
       <p class="comment-text center-text">ภายใต้เงื่อนไขการรักษาลิขสิทธิ์และข้อกำหนดของ MIT License</p>
       <br>
-    </CenterFrame>
+    </ContentFrame>
   </footer>
 </template>
 

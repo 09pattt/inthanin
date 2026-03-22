@@ -1,8 +1,14 @@
 <script setup>
+
+defineProps({
+  animation: String,
+  animationDelay: String
+})
+
 </script>
 
 <template>
-  <div class="block">
+  <div class="component__block" :style="{ animation: animation, animationDelay: animationDelay, opacity: animation ? '0' : '1' }">
     <header>
       <slot/>
     </header>
@@ -13,7 +19,7 @@
 </template>
 
 <style scoped>
-  .block {
+  .component__block {
     height: 160px;
     width: 160px;
     border-radius: var(--space-1);
@@ -26,13 +32,13 @@
     grid-template-rows: 1fr auto;
   }
 
-  header {
+  .component__block > header {
     justify-self: start;
     align-self: start;
     line-height: 1.1;
   }
 
-  main {
+  .component__block > main {
     justify-self: end;
     align-self: end;
 

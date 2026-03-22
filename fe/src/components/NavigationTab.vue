@@ -3,10 +3,10 @@ import {onMounted, ref} from "vue"
 import {useRoute} from "vue-router"
 import { useElementsStore } from "@/stores/elements.ts";
 import NavbarBlankSpace from "@/components/Template/NavbarBlankSpace.vue";
+import ContentFrame from "@/components/Template/ContentFrame.vue";
 
 const route = useRoute()
 const store = useElementsStore()
-const emit = defineEmits(["updateHeight"])
 
 const navbar = ref(null)
 const navbarHeight = ref(0)
@@ -34,34 +34,30 @@ const closeMenu = () => {
 
 onMounted(() => {
   if (navbar.value) {
-    store.NavbarHeight = navbar.value.offsetHeight
+    store.Navbar = navbar
     navbarHeight.value = navbar.value.offsetHeight
-    emit('updateHeight', navbar.value.offsetHeight)
   }
 })
 
 </script>
 
 <template>
-  <nav ref="navbar" @click="toggleMenu">
-    <div class="mobile_nav_space">
-      <div class="title_space">
+  <nav class="navbar" ref="navbar">
+    <div class="nav__space">
+      <div class="nav__title">
+        <router-link to="/home" class="hover__no-bg nav__title_link"></router-link>
         <img src="/images/logo/inthanin.png" alt="">
         <p>INTHANIN</p>
       </div>
-      <div class="menu_hub">
-        <!--<div class="profile">
-          <p>แถบตรงนี้กดได้</p>
-          <img src="/images/icon/login.svg" alt="">
-        </div>-->
-        <div class="menu_button">
+      <div class="nav__menu">
+        <div class="nav__menu_button" @click="toggleMenu">
           <p>{{ isMenuOpened ? 'ปิด' : 'เมนู' }}</p>
           <img src="/images/icon/menu.svg" alt="">
         </div>
       </div>
     </div>
 
-    <div class="path_bar">
+    <div class="nav__path_bar">
       <p>
         คณะสีอินทนิล >>
         <strong>{{ route.meta.title }}</strong>
@@ -69,14 +65,16 @@ onMounted(() => {
     </div>
   </nav>
 
-  <div ref="menu_page" class="menu_page" :class="{ opened : isMenuOpened }">
-    <NavbarBlankSpace></NavbarBlankSpace>
-    <div class="menu_space">
-      <div @click="isMenuOpened = false" class="menu_close_space"></div>
-      <div class="menu_cover">
-        <div ref="menu" class="menu" :class="{ opened : isMenuOpened }">
-          <img src="/images/elements/launchingsoon.png" alt="">
-        </div>
+  <div class="menu" ref="menu_page" :class="{ opened : isMenuOpened }">
+    <NavbarBlankSpace/>
+    <div class="menu__space">
+      <div @click="isMenuOpened = false" class="menu__close_space"></div>
+      <div class="menu__content_wrapper">
+        <ContentFrame pointer-events="none" padding="var(--space-2)">
+          <div class="menu__content" ref="menu" :class="{ opened : isMenuOpened }">
+            <img src="/images/elements/launchingsoon.png" alt="">
+          </div>
+        </ContentFrame>
       </div>
     </div>
   </div>
@@ -85,7 +83,7 @@ onMounted(() => {
 
 
 <style scoped>
-  nav {
+  .navbar {
     z-index: 9005;
     width: 100dvw;
     height: fit-content;
@@ -96,23 +94,7 @@ onMounted(() => {
     overflow: hidden;
   }
 
-  .path_bar {
-    width: 100%;
-    height: fit-content;
-    background-color: var(--c-t1-w1);
-    backdrop-filter: blur(1rem);
-
-    color: var(--c-p3);
-    padding: 0 10px;
-  }
-
-  p {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .mobile_nav_space {
+  .navbar .nav__space {
     width: 100%;
     height: 50px;
     background-color: var(--c-t1-p2);
@@ -122,50 +104,42 @@ onMounted(() => {
     justify-content: space-between;
   }
 
-  .title_space {
+  .navbar .nav__title {
     width: fit-content;
     height: 100%;
     filter: drop-shadow(0px 0px 10px var(--c-t1-w1));
+    position: relative;
 
     display: flex;
     justify-content: start;
     align-items: center;
   }
 
-  .title_space img {
+  .navbar .nav__title_link {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .navbar .nav__title img {
     height: 100%;
     padding: 10px;
   }
 
-  .title_space p {
+  .navbar .nav__title p {
     color: var(--c-w1);
     font-size: 32px;
     font-weight: bold;
   }
 
-  .menu_hub {
+  .navbar .nav__menu {
     display: flex;
     align-items: center;
   }
 
-  .profile {
-    margin-right: 1rem;
-
-    height: 100%;
-    background-color: var();
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1rem;
-  }
-
-  .profile p {
-    color: var(--c-w1);
-    margin-right: 0.2rem;
-  }
-
-  .menu_button {
+  .navbar .nav__menu_button {
     height: 100%;
     aspect-ratio: 1/1;
     display: flex;
@@ -175,12 +149,30 @@ onMounted(() => {
     cursor: pointer;
   }
 
-  .menu_button p {
+  .navbar .nav__menu_button p {
     color: var(--c-w1);
     margin-right: 0.2rem;
   }
 
-  .menu_page {
+  .navbar .nav__path_bar {
+    width: 100%;
+    height: fit-content;
+    background-color: var(--c-t1-w1);
+    backdrop-filter: blur(1rem);
+
+    color: var(--c-p3);
+    padding: 0 10px;
+  }
+
+  .navbar .nav__path_bar p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+
+
+  .menu {
     z-index: 9004;
     width: 100%;
     height: 100%;
@@ -197,20 +189,22 @@ onMounted(() => {
     grid-template-rows: auto 1fr;
   }
 
-  .menu_page.opened {
+  .menu.opened {
     pointer-events: all;
     backdrop-filter: blur(1rem);
   }
 
-  .menu_space {
+  .menu .menu__space {
     width: 100%;
     max-width: 100%;
     height: 100%;
     max-height: 100%;
     position: relative;
+
+    overflow: hidden;
   }
 
-  .menu_close_space {
+  .menu .menu__close_space {
     position: absolute;
     inset: 0;
     z-index: 1;
@@ -218,29 +212,25 @@ onMounted(() => {
     height: 100%;
   }
 
-  .menu_cover {
+  .menu .menu__content_wrapper {
     position: absolute;
     inset: 0;
     z-index: 2;
     width: 100%;
     height: 100%;
-    padding: var(--space-2);
     pointer-events: none;
   }
 
-  .menu {
+  .menu .menu__content {
     width: 100%;
-    max-width: 640px;
-    height: 30dvh;
+    height: fit-content;
     min-height: 200px;
-    max-height: 400px;
     margin: 0 auto;
     border-radius: var(--space-2);
     background-color: var(--c-t1-w1);
     pointer-events: none;
-    opacity: 0;
-    transform: translateY(-50dvh) scale(0.5);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(-150%);
+    transition: transform 0.5s ease;
 
     padding: var(--space-2);
     color: var(--c-p1);
@@ -249,14 +239,15 @@ onMounted(() => {
     justify-content: center;
   }
 
-  .menu.opened {
+  .menu .menu__content.opened {
     pointer-events: all;
-    opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
 
-  .menu img {
+  .menu .menu__content img {
     width: 100%;
+    height: 100%;
+    padding: 10%;
     object-fit: contain;
   }
 </style>

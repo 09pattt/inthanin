@@ -10,6 +10,7 @@ const routes = [
     },
     {
         path: '/home',
+        name: 'home',
         component: Home,
         meta: {
             title: 'หน้าหลัก'
@@ -17,6 +18,7 @@ const routes = [
     },
     {
         path: '/development',
+        name: 'development',
         component: Development,
         meta: {
             title: 'การพัฒนา'
@@ -26,7 +28,21 @@ const routes = [
 
 const router = createRouter({
     history: createWebHistory(),
-    routes
+    routes,
+    scrollBehavior(to, from, savedPosition) {
+        if (savedPosition) {
+            return {
+                ...savedPosition,
+                behavior: 'smooth'
+            }
+        } else {
+            return {
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            }
+        }
+    },
 })
 
 export default router
