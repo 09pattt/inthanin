@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import Home from "@/pages/Home.vue";
 import Development from "@/pages/Development.vue";
+import Notfound from "@/pages/Notfound.vue";
 
 const routes = [
     {
@@ -22,6 +23,15 @@ const routes = [
         component: Development,
         meta: {
             title: 'การพัฒนา'
+        }
+    },
+    {
+
+        path: '/:pathMatch(.*)*',
+        name: 'notfound',
+        component: Notfound,
+        meta: {
+            title: 'ไม่พบหน้า'
         }
     }
 ]

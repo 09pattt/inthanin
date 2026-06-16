@@ -45,32 +45,27 @@ import StatisticsItem from "@/components/Template/StatisticsItem.vue";
       <AnnounceItem animation="slideUp 1s ease, fadeIn 1s forwards" animation-delay="0.2s" >
         <template #header>
           <h1 class="join-text">
-            ลงทะเบียน
+            สวัสดี
           </h1>
           <h1 class="join-text" style="color: var(--c-y1);">
-            เร็วๆนี้
+             จ๊ะจ๋า
           </h1>
         </template>
         <p>
-          หน้าเว็บมีแล้ว การใช้งานทั่วไปก็มีแล้ว ต่อไปคือ
-          <strong>ระบบบัญชีสมาชิก</strong>
-          เพื่อใช้ระบุตัวตนและใช้สำหรับการดำเนินการประสานงานต่างๆ เพื่อให้เราร่วมกันทำหน้าที่ในคณะสีได้สะดวก ทั้งการแข่งกีฬา การเตรียมงานกีฬาสีและอื่นๆ
+          อันนี้พัดพิมพ์นะครับ ถ้าจ๊ะจ๋าสนใจบอกพัดเลยครับ เว็บใช้ได้ทุกอย่างแล้วเหลือใส่เนื้อหาอย่างเดียวละครับ
         </p>
       </AnnounceItem>
       <AnnounceItem animation="slideUp 1s ease, fadeIn 1s forwards" animation-delay="0.4s" >
         <template #header>
           <h1 class="join-text">
-            โหวต
+            ช่องว่าง
           </h1>
           <h1 class="join-text" style="color: var(--c-p1);">
-            เลือกธีม
-          </h1>
-          <h1 class="join-text">
-            คณะสี๊
+            ไม่มีไร
           </h1>
         </template>
         <p>
-          -
+          ถ้าไม่มีช่องนี้เดี๋ยวเว็บไม่สวย
         </p>
       </AnnounceItem>
     </SideSlideFrame>

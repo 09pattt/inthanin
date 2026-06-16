@@ -42,15 +42,15 @@ onMounted(() => {
 </script>
 
 <template>
-  <nav class="navbar" ref="navbar">
+  <nav class="navbar" ref="navbar" @click="toggleMenu">
     <div class="nav__space">
       <div class="nav__title">
-        <router-link to="/home" class="hover__no-bg nav__title_link"></router-link>
+        <!--<router-link to="/home" class="hover__no-bg nav__title_link"></router-link>-->
         <img src="/images/logo/inthanin.png" alt="">
         <p>INTHANIN</p>
       </div>
       <div class="nav__menu">
-        <div class="nav__menu_button" @click="toggleMenu">
+        <div class="nav__menu_button">
           <p>{{ isMenuOpened ? 'ปิด' : 'เมนู' }}</p>
           <img src="/images/icon/menu.svg" alt="">
         </div>
@@ -67,12 +67,27 @@ onMounted(() => {
 
   <div class="menu" ref="menu_page" :class="{ opened : isMenuOpened }">
     <NavbarBlankSpace/>
-    <div class="menu__space">
-      <div @click="isMenuOpened = false" class="menu__close_space"></div>
+    <div @click="isMenuOpened = false" class="menu__space">
       <div class="menu__content_wrapper">
         <ContentFrame pointer-events="none" padding="var(--space-2)">
           <div class="menu__content" ref="menu" :class="{ opened : isMenuOpened }">
-            <img src="/images/elements/launchingsoon.png" alt="">
+            <h1 class="menu__header">เมนู</h1>
+            <div class="menu__link" :class="{ active: isMenuOpened }" style="--delay: 200ms;">
+              <router-link to="/home" class="hover__no-bg menu__link_router"></router-link>
+              <p>หน้าหลัก</p>
+            </div>
+            <div class="menu__link" :class="{ active: isMenuOpened }" style="--delay: 400ms;">
+              <router-link to="/about" class="hover__no-bg menu__link_router"></router-link>
+              <p>ข่าว/ประชาสัมพันธ์</p>
+            </div>
+            <div class="menu__link" :class="{ active: isMenuOpened }" style="--delay: 600ms;">
+              <router-link to="/contact" class="hover__no-bg menu__link_router"></router-link>
+              <p>ช่องทางติดต่อ</p>
+            </div>
+            <div class="menu__link" :class="{ active: isMenuOpened }" style="--delay: 800ms;">
+              <router-link to="/development" class="hover__no-bg menu__link_router"></router-link>
+              <p>การพัฒนา</p>
+            </div>
           </div>
         </ContentFrame>
       </div>
@@ -191,7 +206,7 @@ onMounted(() => {
 
   .menu.opened {
     pointer-events: all;
-    backdrop-filter: blur(1rem);
+    backdrop-filter: blur(1rem) brightness(0.5);
   }
 
   .menu .menu__space {
@@ -202,14 +217,6 @@ onMounted(() => {
     position: relative;
 
     overflow: hidden;
-  }
-
-  .menu .menu__close_space {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
   }
 
   .menu .menu__content_wrapper {
@@ -226,17 +233,11 @@ onMounted(() => {
     height: fit-content;
     min-height: 200px;
     margin: 0 auto;
-    border-radius: var(--space-2);
-    background-color: var(--c-t1-w1);
     pointer-events: none;
-    transform: translateY(-150%);
-    transition: transform 0.5s ease;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in-out;
 
-    padding: var(--space-2);
     color: var(--c-p1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .menu .menu__content.opened {
@@ -249,5 +250,40 @@ onMounted(() => {
     height: 100%;
     padding: 10%;
     object-fit: contain;
+  }
+
+  .menu .menu__header {
+    color: var(--c-w1);
+    font-size: 4rem;
+    filter: drop-shadow(0px 0px 10px var(--c-t1-w1));
+  }
+
+  .menu .menu__link {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    transition: all 0.5s ease;
+    opacity: 0;
+  }
+
+  .menu .menu__link.active {
+    animation: slideDown 0.5s ease forwards;
+    animation-delay: var(--delay);
+  }
+
+  .menu .menu__link:hover {
+    transition: all 0.25s ease;
+    background-color: var(--c-t3-w1);
+    padding-left: 0.5rem;
+  }
+
+  .menu .menu__link_router {
+    position: absolute;
+    inset: 0;
+  }
+
+  .menu .menu__link p {
+    color: var(--c-t1-w1);
+    font-size: 1.5rem;
   }
 </style>

@@ -38,21 +38,21 @@ import StatisticsItem from "@/components/Template/StatisticsItem.vue";
         <h2>เวอร์ชั่นหน้าเว็บ</h2>
         เวอร์ชั่นที่ดีพลอยล่าสุด
         <template #bottom>
-          <h2 style="color: var(--c-r1); filter: drop-shadow(0 0 var(--space-2) var(--c-r1));">A1.0.0</h2>
+          <h2 style="color: var(--c-r1); filter: drop-shadow(0 0 var(--space-2) var(--c-r1));">A0.1.1</h2>
         </template>
       </StatisticsItem>
       <StatisticsItem animation="slideDown 0.5s ease, fadeIn 1s forwards" animation-delay="0.2s" >
         <h2>วันที่อัปเดต</h2>
         วันที่มีการปล่อยเวอร์ชั่นนี้
         <template #bottom>
-          <h2 style="color: var(--c-b1); filter: drop-shadow(0 0 var(--space-2) var(--c-b1));">23/03/26</h2>
+          <h2 style="color: var(--c-b1); filter: drop-shadow(0 0 var(--space-2) var(--c-b1));">16/06/26</h2>
         </template>
       </StatisticsItem>
       <StatisticsItem animation="slideDown 0.5s ease, fadeIn 1s forwards" animation-delay="0.4s" >
         <h2>พื้นที่จัดเก็บ</h2>
         ขนาดไฟล์ระบบ
         <template #bottom>
-          <h2 style="color: var(--c-y1); filter: drop-shadow(0 0 var(--space-2) var(--c-y1));">126.5MB</h2>
+          <h2 style="color: var(--c-y1); filter: drop-shadow(0 0 var(--space-2) var(--c-y1));">135.1MB</h2>
         </template>
       </StatisticsItem>
     </SideSlideFrame>
