@@ -24,7 +24,7 @@ import StatisticsItem from "@/components/Template/StatisticsItem.vue";
 
     <SideSlideFrame>
       <template #header>
-        <h1 style="color: var(--c-b1); filter: drop-shadow(0 0 var(--space-1) var(--c-t1-b1));">ประกาศๆ</h1>
+        <h1 style="color: var(--c-b1); filter: drop-shadow(0 0 var(--space-1) var(--c-t1-b1));">ประกาศ</h1>
       </template>
 
       <AnnounceItem animation="slideUp 1s ease, fadeIn 1s forwards" animation-delay="0s" >
@@ -45,27 +45,27 @@ import StatisticsItem from "@/components/Template/StatisticsItem.vue";
       <AnnounceItem animation="slideUp 1s ease, fadeIn 1s forwards" animation-delay="0.2s" >
         <template #header>
           <h1 class="join-text">
-            สวัสดี
+            ประกาศ
           </h1>
           <h1 class="join-text" style="color: var(--c-y1);">
-             จ๊ะจ๋า
+            A1
           </h1>
         </template>
         <p>
-          อันนี้พัดพิมพ์นะครับ ถ้าจ๊ะจ๋าสนใจบอกพัดเลยครับ เว็บใช้ได้ทุกอย่างแล้วเหลือใส่เนื้อหาอย่างเดียวละครับ
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto consequatur cupiditate esse ex, excepturi expedita illum ipsa laboriosam laudantium minima nam quos ratione rem rerum sed ullam velit voluptatem?
         </p>
       </AnnounceItem>
       <AnnounceItem animation="slideUp 1s ease, fadeIn 1s forwards" animation-delay="0.4s" >
         <template #header>
           <h1 class="join-text">
-            ช่องว่าง
+            ประกาศ
           </h1>
           <h1 class="join-text" style="color: var(--c-p1);">
-            ไม่มีไร
+            A2
           </h1>
         </template>
         <p>
-          ถ้าไม่มีช่องนี้เดี๋ยวเว็บไม่สวย
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aspernatur aut earum eos id incidunt, iure iusto modi officia quibusdam, saepe voluptates voluptatibus? Aperiam cumque, cupiditate iure quam quos sunt.
         </p>
       </AnnounceItem>
     </SideSlideFrame>
@@ -131,32 +131,32 @@ import StatisticsItem from "@/components/Template/StatisticsItem.vue";
         <h2>กีฬาสีอีก</h2>
         -
         <template #bottom>
-          <h1 style="color: var(--c-g1); filter: drop-shadow(0 0 var(--space-2) var(--c-g1));">140วัน</h1>
+          <h1 style="color: var(--c-g1); filter: drop-shadow(0 0 var(--space-2) var(--c-g1));">N/A</h1>
         </template>
       </StatisticsItem>
       <StatisticsItem animation="slideDown 0.5s ease, fadeIn 1s forwards" animation-delay="0.4s" >
         <h2>สมาชิกคณะสี</h2>
         จำนวนสมาชิกทั้งหมด
         <template #bottom>
-          <h1 style="color: var(--c-p1); filter: drop-shadow(0 0 var(--space-2) var(--c-p1));">585คน</h1>
+          <h1 style="color: var(--c-p1); filter: drop-shadow(0 0 var(--space-2) var(--c-p1));">N/A</h1>
         </template>
       </StatisticsItem>
       <StatisticsItem animation="slideDown 0.5s ease, fadeIn 1s forwards" animation-delay="0.6s" >
         <h2>การเข้าชม</h2>
         ยอดการเปิดหน้าเว็บ
         <template #bottom>
-          <h1 style="color: var(--c-b1); filter: drop-shadow(0 0 var(--space-2) var(--c-b1));">6767</h1>
+          <h1 style="color: var(--c-b1); filter: drop-shadow(0 0 var(--space-2) var(--c-b1));">N/A</h1>
         </template>
       </StatisticsItem>
     </SideSlideFrame>
 
     <ContentFrame padding="var(--space-1)">
       <div style="height: 2rem;"></div>
-      <h1 style="color: var(--c-r1); filter: drop-shadow(0 0 var(--space-1) var(--c-t1-r1));">ฟอร์มรายงานผู้พัฒนา</h1>
+      <h1 style="color: var(--c-r1); filter: drop-shadow(0 0 var(--space-1) var(--c-t1-r1));">แบบสอบถาม</h1>
       <div style="height: var(--space-1);"></div>
       <div style="width: 100%; background-color: var(--c-main-bg2); border-radius: var(--space-1); padding: var(--space-1); filter: drop-shadow(var(--space-1) var(--space-1) var(--space-2) var(--c-t3-bl1));">
-        <h2 class="center-text">เร็วๆนี้</h2>
-        <p class="center-text">สำหรับการกรอกแนะนำหรือรายงานปัญหา</p>
+        <h2 class="center-text">This form is unavailable</h2>
+        <p class="center-text">สำหรับการกรอกแนะนำหรือรายงาน</p>
       </div>
     </ContentFrame>
 
@@ -168,7 +168,7 @@ import StatisticsItem from "@/components/Template/StatisticsItem.vue";
   width: 100%;
   height: fit-content;
   filter: drop-shadow(0 0 var(--space-2) var(--c-t1-p2));
-  animation: topOpening 1s;
+  animation: fadeIn 2s ease;
 }
 
 .home .content__development_container {
