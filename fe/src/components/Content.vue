@@ -11,9 +11,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <div ref="app_content" class="app_content">
+  <main ref="app_content" class="app_content">
     <slot/>
-  </div>
+  </main>
 </template>
 
 <style scoped>
