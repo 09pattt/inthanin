@@ -47,7 +47,7 @@ onMounted(() => {
       <div class="nav__title">
         <!--<router-link to="/home" class="hover__no-bg nav__title_link"></router-link>-->
         <img src="/images/logo/inthanin.png" alt="">
-        <p>INTHANIN</p>
+        <p>Inthanin</p>
       </div>
       <div class="nav__menu">
         <div class="nav__menu_button">
@@ -59,7 +59,7 @@ onMounted(() => {
 
     <div class="nav__path_bar">
       <p>
-        คณะสีอินทนิล >>
+        คณะสีอินทนิล /
         <strong>{{ route.meta.title }}</strong>
       </p>
     </div>
@@ -122,7 +122,7 @@ onMounted(() => {
   .navbar .nav__title {
     width: fit-content;
     height: 100%;
-    filter: drop-shadow(0px 0px 10px var(--c-t1-w1));
+    /*filter: drop-shadow(0px 0px 10px var(--c-t1-w1));*/
     position: relative;
 
     display: flex;
