@@ -19,6 +19,10 @@ import SideSlider from "@/components/Template/SideSlider.vue";
       </ContentFrame>
     </header>
 
+    <ContentFrame padding="var(--space-1)">
+      <h1 class="heading">Merchandise</h1>
+    </ContentFrame>
+
     <Block class="merchandise">
       <SideSlider>
         <div class="preview_wrapper">
@@ -32,7 +36,7 @@ import SideSlider from "@/components/Template/SideSlider.vue";
             Inthanin Jerseyyyyy
           </h2>
           <p style="text-indent: 1rem;">
-            เรามากับการเปิดตัว<strong style="color: var(--c-p1);">เสื้อทีมคณะสีอินทนิล</strong>เป็นเสื้อ Jersey สีม่วงมีลวดลายตามธีมของคณะสีในปีนี้
+            เรามากับการเปิดตัว<strong style="color: var(--c-p1);">เสื้อทีมคณะสีอินทนิลปี 2026 </strong>เป็นเสื้อ Jersey สีม่วงมีลวดลายตามธีมของคณะสีในปีนี้
           </p>
           <h1 style="color: var(--c-p1); text-align: end; margin-top: auto;">
             219.-
@@ -87,6 +91,17 @@ import SideSlider from "@/components/Template/SideSlider.vue";
         </div>
       </SideSlider>
     </Block>
+
+    <div style="height: 50px;">
+    </div>
+
+    <ContentFrame padding="var(--space-1)">
+      <h1 class="heading">2026 Gallery</h1>
+    </ContentFrame>
+
+    <Block class="gallery">
+      <img src="/images/elements/inthanin_gallery.png" alt="Banner" class="banner">
+    </Block>
   </div>
 </template>
 
@@ -138,5 +153,9 @@ import SideSlider from "@/components/Template/SideSlider.vue";
   padding: var(--space-1);
   display: flex;
   flex-direction: column;
+}
+
+.page .gallery .banner {
+  width: 100%;
 }
 </style>
