@@ -263,6 +263,7 @@ onMounted(() => {
     height: fit-content;
     position: relative;
     transition: all 0.5s ease;
+    color: var(--c-t1-w1);
     opacity: 0;
   }
 
@@ -273,7 +274,8 @@ onMounted(() => {
 
   .menu .menu__link:hover {
     transition: all 0.25s ease;
-    background-color: var(--c-t3-w1);
+    color: var(--c-bl1);
+    background-color: var(--c-w3);
     padding-left: 0.5rem;
   }
 
@@ -283,7 +285,6 @@ onMounted(() => {
   }
 
   .menu .menu__link p {
-    color: var(--c-t1-w1);
     font-size: 1.5rem;
   }
 </style>

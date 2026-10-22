@@ -84,6 +84,9 @@
   --c-main-bg1: var(--c-w4);
   --c-main-bg2: var(--c-w3);
   --c-main-bg3: var(--c-w2);
+  --c-opposite-bg1: var(--c-bl2);
+  --c-opposite-bg2: var(--c-bl3);
+  --c-opposite-bg3: var(--c-gr1);
   --c-text: var(--c-bl1);
 }
 
@@ -92,6 +95,9 @@
     --c-main-bg1: var(--c-bl2);
     --c-main-bg2: var(--c-bl3);
     --c-main-bg3: var(--c-gr1);
+    --c-opposite-bg1: var(--c-w4);
+    --c-opposite-bg2: var(--c-w3);
+    --c-opposite-bg3: var(--c-w2);
     --c-text: var(--c-w3);
   }
 }
