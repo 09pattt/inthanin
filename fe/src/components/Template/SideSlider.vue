@@ -24,12 +24,13 @@ defineProps({
 <style scoped>
 .container {
   width: 100%;
-  height: fit-content;
+  height: 260px;
 
   display: flex;
   flex-direction: row;
 
   overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .container > * {
