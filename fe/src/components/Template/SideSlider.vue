@@ -1,8 +1,12 @@
 <script setup lang="ts">
 defineProps({
+  height: {
+    type: String,
+    default: "fit-content",
+  },
   padding: {
     type: String,
-    default: "var(--space-device-1)",
+    default: "var(--space-1)",
   },
   background: {
     type: String,
@@ -14,6 +18,7 @@ defineProps({
 <template>
   <main class="container"
         :style="{
+    height: height,
     padding: padding,
     background: background,
     }">
@@ -24,7 +29,6 @@ defineProps({
 <style scoped>
 .container {
   width: 100%;
-  height: 260px;
 
   display: flex;
   flex-direction: row;

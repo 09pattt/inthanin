@@ -10,19 +10,22 @@ import Reveal from "@/components/Property/Reveal.vue";
 <template>
   <div class="page">
 
+    <div class="backdrop"></div>
+
     <header class="header">
-      <NavbarBlankSpace/>
-      <ContentFrame>
-        <div style="height: 3rem;"></div>
-
-        <FloatImage>
-          <img src="/images/logo/inthanin.png" alt="Inthanin 42nd" style="height: 8rem;" />
-        </FloatImage>
-
-        <h1 class="center-text heading" style="color: var(--c-p2);">คณะสีอินทนิล</h1>
-        <div style="height: 3rem;"></div>
-      </ContentFrame>
+      <div style="flex: 0 0 auto;">
+        <NavbarBlankSpace/>
+      </div>
+      <div style="flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center;">
+        <ContentFrame>
+          <div style="padding: 0 2rem;">
+            <img src="/images/elements/inthanin_hero.svg" alt="" style="width: 100%; filter: drop-shadow(1rem 1rem 8px var(--c-t2-bl1));">
+          </div>
+        </ContentFrame>
+      </div>
     </header>
+
+    <div style="height: 50dvh;"></div>
 
     <Reveal :threshold="0.5">
       <ContentFrame padding="var(--space-1)">
@@ -30,7 +33,7 @@ import Reveal from "@/components/Property/Reveal.vue";
       </ContentFrame>
 
       <Block class="merchandise">
-        <SideSlider>
+        <SideSlider height="250px">
           <div class="preview_wrapper">
             <img src="/images/elements/jersey.png" alt="preview" class="preview">
           </div>
@@ -187,6 +190,10 @@ import Reveal from "@/components/Property/Reveal.vue";
   min-height: 100dvh;
   filter: drop-shadow(0 0 var(--space-2) var(--c-t1-p2));
   animation: fadeIn 2s ease;
+
+  display: flex;
+  flex-direction: column;
+
 }
 
 .page .merchandise .preview_wrapper {
@@ -234,5 +241,26 @@ import Reveal from "@/components/Property/Reveal.vue";
 
 .page .gallery .banner {
   width: 100%;
+}
+
+.page .backdrop {
+  position: fixed;
+  inset: 0;
+  opacity: 1;            /* สถานะเริ่มต้น (default) ที่ปลอดภัย */
+  pointer-events: none;
+  background: var(--c-p3);
+}
+
+@supports (animation-timeline: scroll()) {
+  @keyframes fade-out {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+  }
+
+  .page .backdrop {
+    animation: fade-out linear both;
+    animation-timeline: scroll(root block); /* ต้องเขียนหลัง shorthand `animation` */
+    animation-range: 0 50dvh;
+  }
 }
 </style>
