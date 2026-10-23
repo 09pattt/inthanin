@@ -1,5 +1,4 @@
 <script setup>
-import Logo from "@/components/Objects/Logo.vue";
 import ContentFrame from "@/components/Template/ContentFrame.vue";
 </script>
 

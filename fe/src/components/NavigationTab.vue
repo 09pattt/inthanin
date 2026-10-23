@@ -72,21 +72,21 @@ onMounted(() => {
         <ContentFrame pointer-events="none" padding="var(--space-2)">
           <div class="menu__content" ref="menu" :class="{ opened : isMenuOpened }">
             <h1 class="menu__header">เมนู</h1>
-            <div class="menu__link" :class="{ active: isMenuOpened }" style="--delay: 200ms;">
+            <div class="menu__link" :class="{ active: isMenuOpened }" style="--delay: 300ms;">
               <router-link to="/home" class="hover__no-bg menu__link_router"></router-link>
               <p>หน้าหลัก</p>
             </div>
             <div class="menu__link" :class="{ active: isMenuOpened }" style="--delay: 400ms;">
-              <router-link to="/about" class="hover__no-bg menu__link_router"></router-link>
+              <router-link to="/information" class="hover__no-bg menu__link_router"></router-link>
               <p>ข่าว/ประชาสัมพันธ์</p>
             </div>
-            <div class="menu__link" :class="{ active: isMenuOpened }" style="--delay: 600ms;">
-              <router-link to="/contact" class="hover__no-bg menu__link_router"></router-link>
-              <p>ช่องทางติดต่อ</p>
+            <div class="menu__link" :class="{ active: isMenuOpened }" style="--delay: 500ms;">
+              <router-link to="/merchandise" class="hover__no-bg menu__link_router"></router-link>
+              <p>สินค้า</p>
             </div>
-            <div class="menu__link" :class="{ active: isMenuOpened }" style="--delay: 800ms;">
-              <router-link to="/development" class="hover__no-bg menu__link_router"></router-link>
-              <p>การพัฒนา</p>
+            <div class="menu__link" :class="{ active: isMenuOpened }" style="--delay: 600ms;">
+              <router-link to="/gallery" class="hover__no-bg menu__link_router"></router-link>
+              <p>ภาพวันเตรียม</p>
             </div>
           </div>
         </ContentFrame>

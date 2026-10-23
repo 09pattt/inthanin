@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img src="/images/logo/inthanin.png" alt="">
+    <slot/>
   </div>
 </template>
 
@@ -12,9 +12,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  img {
-    width: 100px;
   }
 </style>

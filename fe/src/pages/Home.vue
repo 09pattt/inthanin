@@ -1,6 +1,6 @@
 <script setup>
 import NavbarBlankSpace from "@/components/Template/NavbarBlankSpace.vue";
-import Logo from "@/components/Objects/Logo.vue";
+import FloatImage from "@/components/Template/FloatImage.vue";
 import ContentFrame from "@/components/Template/ContentFrame.vue";
 import Block from "@/components/Template/Block.vue";
 import SideSlider from "@/components/Template/SideSlider.vue";
@@ -12,10 +12,14 @@ import SideSlider from "@/components/Template/SideSlider.vue";
     <header class="header">
       <NavbarBlankSpace/>
       <ContentFrame>
-        <br>
-        <Logo/>
+        <div style="height: 3rem;"></div>
+
+        <FloatImage>
+          <img src="/images/logo/inthanin.png" alt="Inthanin 42nd" style="height: 8rem;" />
+        </FloatImage>
+
         <h1 class="center-text heading" style="color: var(--c-p2);">คณะสีอินทนิล</h1>
-        <div style="height: var(--space-3);"></div>
+        <div style="height: 3rem;"></div>
       </ContentFrame>
     </header>
 
