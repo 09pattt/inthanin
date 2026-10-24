@@ -1,8 +1,5 @@
 <script setup>
-import NavbarBlankSpace from "@/components/Template/NavbarBlankSpace.vue";
 import ContentFrame from "@/components/Template/ContentFrame.vue";
-import Block from "@/components/Template/Block.vue";
-import SideSlider from "@/components/Template/SideSlider.vue";
 import Reveal from "@/components/Property/Reveal.vue";
 </script>
 
@@ -13,7 +10,9 @@ import Reveal from "@/components/Property/Reveal.vue";
 
     <header class="header">
       <div style="flex: 0 0 auto;">
+        <!-- เอาพื้นที่ออกถ้าไม่มี NavigationTab แสดงผล
         <NavbarBlankSpace/>
+        -->
       </div>
       <div style="flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center;">
         <ContentFrame>
@@ -24,167 +23,20 @@ import Reveal from "@/components/Property/Reveal.vue";
       </div>
     </header>
 
-    <div style="height: 50dvh;"></div>
-
-    <Reveal :threshold="0.5">
-      <ContentFrame padding="var(--space-1)">
-        <h1 class="heading">Merchandise</h1>
-      </ContentFrame>
-
-      <Block class="merchandise">
-        <SideSlider height="250px">
-          <div class="preview_wrapper">
-            <img src="/images/elements/jersey.png" alt="preview" class="preview">
-          </div>
-
-          <div style="width: 1rem;"></div>
-
-          <Reveal :threshold="0.2" transform-in="translateY(50%)">
-            <div class="information">
-              <h2 style="background: var(--c-p3); color: var(--c-w3); text-align: center;">
-                Inthanin Jerseyyyyy
-              </h2>
-              <p style="text-indent: 1rem;">
-                เรามากับการเปิดตัว<strong style="color: var(--c-p1);">เสื้อทีมคณะสีอินทนิลปี 2026 </strong>เป็นเสื้อ Jersey สีม่วงมีลวดลายตามธีมของคณะสีในปีนี้
-              </p>
-              <h1 style="color: var(--c-p1); text-align: end; margin-top: auto;">
-                219.-
-              </h1>
-              <!--<p class="comment-text" style="text-align: end;">เลื่อนดูเพิ่มเติม >></p>-->
-            </div>
-          </Reveal>
-
-          <div style="width: 1rem;"></div>
-
-          <div class="preview_wrapper">
-            <img src="/images/elements/headband.png" alt="preview" class="preview">
-          </div>
-
-          <div style="width: 1rem;"></div>
-
-          <Reveal :threshold="0.2" transform-in="translateY(50%)">
-            <div class="information">
-              <h2 style="background: var(--c-p3); color: var(--c-w3); text-align: center;">
-                Inthanin Headband
-              </h2>
-              <p style="text-indent: 1rem;">
-                ครั้งนี้เรามากับ<strong style="color: var(--c-p1);">ผ้าคาดหัวทีมอินทนิล</strong> ไม่ว่าใครก็จับจองเป็นของตัวเองได้ในราคาเพียง
-              </p>
-              <h1 style="color: var(--c-p1); text-align: end; margin-top: auto;">
-                59.-
-              </h1>
-              <!--<p class="comment-text" style="text-align: end;">เลื่อนดูเพิ่มเติม >></p>-->
-            </div>
-          </Reveal>
-
-          <div style="width: 1rem;"></div>
-
-          <Reveal :threshold="0.2" transform-in="translateY(50%)">
-            <div class="condition">
-              <h3 style="color: var(--c-p1);">รายละเอียดการสั่งซื้อ</h3>
-              <p>- ผู้สั่งซื้อไม่จำเป็นต้องเป็นสมาชิกคณะสีอินทนิล</p>
-              <p>- ไม่สามารถยกเลิกการสั่งซื้อได้</p>
-              <p>- ชำระเงินผ่านช่องทางการโอน</p>
-              <p>- ตรวจสอบขนาดไซส์เสื้อให้ดีก่อนสั่งซื้อ</p>
-              <p>- วันรับเสื้อจะแจ้งผ่านช่องทางไอจีและเว็บไซต์</p>
-              <p>- อย่าลืมติดตามข่าวสารหลังทำการสั่งซื้อ</p>
-            </div>
-          </Reveal>
-
-          <div style="width: 1rem;"></div>
-
-          <Reveal :threshold="0.2" transform-in="translateY(50%)">
-            <div class="order">
-              <h2 style="color: var(--c-p1);">เพิ่มเติม</h2>
-              <p style="text-indent: 1rem;">
-                ตรวจสอบรายละเอียดของเสื้อหรือผ้าคาดและกรอกฟอร์มสั่งซื้อ กดดูได้ด้านล่างนี้ได้เลย
-              </p>
-              <router-link to="/shop/jersey2026"
-                           class="hover__no-bg"
-                           style="color: var(--c-w3); text-align: center; font-size: 1.5rem; background: var(--c-y1); margin-top: auto;"
-              >ดูเพิ่มเติม</router-link>
-            </div>
-          </Reveal>
-        </SideSlider>
-      </Block>
-    </Reveal>
-
-    <div style="height: 50px;"></div>
-
-    <Reveal :threshold="0.3">
-      <ContentFrame padding="var(--space-1)">
-        <h1 class="heading">2026 Gallery</h1>
-      </ContentFrame>
-
-      <Block class="content_section">
-        <img src="/images/elements/inthanin_gallery.png" alt="Banner" class="banner">
-        <div class="information">
-          <h2>ภาพบรรยากาศวันเตรียม</h2>
-          <p style="text-indent: 1rem;">คณะสีอินทนิลเรามีตากล้องช่วยเก็บภาพบรรยากาศการเตรียมงานกีฬาสีประจำปีไว้ด้วย มีตั้งแต่การซ้อมแสตนเชียร์และเชียร์หลีดเดอร์ การเตรียมขบวนพาเหรด และการฝึกซ้อมและคัดเลือกนักกีฬาอินทนิล</p>
-          <div style="align-self: end; width: 120px; height: fit-content; border-radius: 0.5rem; background: var(--c-y1);">
-            <a href="https://drive.google.com/drive/folders/1YH6XyQYhZdMSr1RW4EpAWEqq9VLekhzx?fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJmZGlkFlEN2n5n_E4B7UT5onBDwi9bW57kff1zcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAafqb4Jchs9cVRy4gvBWtymQZtvkU1GDTSVgOIP0NkcpvHUUzAey-d7TBmh4uQ_aem_Z06UrFYG6baNKAMn1Qn9Ag"
-               target="_blank"
-               style="width: 100%;">
-              <h3 style="color: var(--c-w3); text-align: center; font-size: 1.5rem;">
-                ดูแกลเลอรี่
-              </h3>
-            </a>
-          </div>
-        </div>
-      </Block>
-    </Reveal>
-
-    <div style="height: 50px;"></div>
-
-    <Reveal :threshold="0.5">
-      <ContentFrame padding="var(--space-1)">
-        <h1 class="heading">Report</h1>
-      </ContentFrame>
-
-      <Block class="content_section">
-        <img src="/images/elements/mailsending.png" alt="Banner" class="banner">
-        <div class="information">
-          <h2>ฟอร์มรายงานปัญหา</h2>
-          <p style="text-indent: 1rem;">สำหรับสมาชิกอินทนิล ทุกคนสามารถแจ้งปัญหาภายในคณะสีให้พวกเราได้ผ่านช่องทางนี้เลย</p>
-          <div style="align-self: end; width: 120px; height: fit-content; border-radius: 0.5rem; background: var(--c-r1);">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfOeNkDUpoSWVAqh9u9sp4ZURc7Hc1lOkp5H1pC29SXX2k9eg/viewform?pli=1"
-               target="_blank"
-               style="width: 100%;">
-              <h3 style="color: var(--c-w3); text-align: center; font-size: 1.5rem;">
-                รายงานปัญหา
-              </h3>
-            </a>
-          </div>
-        </div>
-      </Block>
-    </Reveal>
-
     <div style="height: 4rem;"></div>
 
     <div class="rolling_text">
       <ContentFrame>
         <Reveal root-margin="-150px 0px" transform-in="scale(0.8)">
-          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">I</h1>
+          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">C</h1>
           <div style="height: 1rem;"></div>
         </Reveal>
         <Reveal root-margin="-150px 0px" transform-in="scale(0.8)">
-          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">N</h1>
+          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">O</h1>
           <div style="height: 1rem;"></div>
         </Reveal>
         <Reveal root-margin="-150px 0px" transform-in="scale(0.8)">
-          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">T</h1>
-          <div style="height: 1rem;"></div>
-        </Reveal>
-        <Reveal root-margin="-150px 0px" transform-in="scale(0.8)">
-          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">H</h1>
-          <div style="height: 1rem;"></div>
-        </Reveal>
-        <Reveal root-margin="-150px 0px" transform-in="scale(0.8)">
-          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">A</h1>
-          <div style="height: 1rem;"></div>
-        </Reveal>
-        <Reveal root-margin="-150px 0px" transform-in="scale(0.8)">
-          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">N</h1>
+          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">M</h1>
           <div style="height: 1rem;"></div>
         </Reveal>
         <Reveal root-margin="-150px 0px" transform-in="scale(0.8)">
@@ -196,22 +48,32 @@ import Reveal from "@/components/Property/Reveal.vue";
           <div style="height: 1rem;"></div>
         </Reveal>
         <Reveal root-margin="-150px 0px" transform-in="scale(0.8)">
-          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">2</h1>
+          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">G</h1>
           <div style="height: 1rem;"></div>
         </Reveal>
         <Reveal root-margin="-150px 0px" transform-in="scale(0.8)">
-          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">0</h1>
+          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">S</h1>
           <div style="height: 1rem;"></div>
         </Reveal>
         <Reveal root-margin="-150px 0px" transform-in="scale(0.8)">
-          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">2</h1>
+          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">O</h1>
           <div style="height: 1rem;"></div>
         </Reveal>
         <Reveal root-margin="-150px 0px" transform-in="scale(0.8)">
-          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">6</h1>
+          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">O</h1>
+          <div style="height: 1rem;"></div>
+        </Reveal>
+        <Reveal root-margin="-150px 0px" transform-in="scale(0.8)">
+          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">N</h1>
+          <div style="height: 1rem;"></div>
+        </Reveal>
+        <Reveal root-margin="-150px 0px" transform-in="scale(0.8)">
+          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">!</h1>
           <div style="height: 1rem;"></div>
         </Reveal>
       </ContentFrame>
+
+      <div style="height: 200px;"></div>
 
     </div>
 

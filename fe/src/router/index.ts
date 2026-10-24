@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Home from "@/pages/Home.vue";
-import Notfound from "@/pages/Notfound.vue";
 
 const routes = [
     {
@@ -16,13 +15,12 @@ const routes = [
             title: 'หน้าหลัก'
         }
     },
-    {
-
+    { /** ชี้ทุก path ต่อจากนี้กลับไปที่ /home */
         path: '/:pathMatch(.*)*',
-        name: 'notfound',
-        component: Notfound,
+        name: 'home',
+        component: Home,
         meta: {
-            title: 'ไม่พบหน้า'
+            title: 'หน้าหลัก'
         }
     }
 ]
