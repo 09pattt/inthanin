@@ -1,6 +1,5 @@
 <script setup>
 import NavbarBlankSpace from "@/components/Template/NavbarBlankSpace.vue";
-import FloatImage from "@/components/Template/FloatImage.vue";
 import ContentFrame from "@/components/Template/ContentFrame.vue";
 import Block from "@/components/Template/Block.vue";
 import SideSlider from "@/components/Template/SideSlider.vue";
@@ -96,14 +95,14 @@ import Reveal from "@/components/Property/Reveal.vue";
 
           <Reveal :threshold="0.2" transform-in="translateY(50%)">
             <div class="order">
-              <h2 style="color: var(--c-p1);">ของมันต้องมีอะค้าบ</h2>
+              <h2 style="color: var(--c-p1);">เพิ่มเติม</h2>
               <p style="text-indent: 1rem;">
                 ตรวจสอบรายละเอียดของเสื้อหรือผ้าคาดและกรอกฟอร์มสั่งซื้อ กดดูได้ด้านล่างนี้ได้เลย
               </p>
               <router-link to="/shop/jersey2026"
                            class="hover__no-bg"
                            style="color: var(--c-w3); text-align: center; font-size: 1.5rem; background: var(--c-y1); margin-top: auto;"
-              >สั่งซื้อ</router-link>
+              >ดูเพิ่มเติม</router-link>
             </div>
           </Reveal>
         </SideSlider>
@@ -112,13 +111,51 @@ import Reveal from "@/components/Property/Reveal.vue";
 
     <div style="height: 50px;"></div>
 
-    <Reveal :threshold="0.5">
+    <Reveal :threshold="0.3">
       <ContentFrame padding="var(--space-1)">
         <h1 class="heading">2026 Gallery</h1>
       </ContentFrame>
 
-      <Block class="gallery">
+      <Block class="content_section">
         <img src="/images/elements/inthanin_gallery.png" alt="Banner" class="banner">
+        <div class="information">
+          <h2>ภาพบรรยากาศวันเตรียม</h2>
+          <p style="text-indent: 1rem;">คณะสีอินทนิลเรามีตากล้องช่วยเก็บภาพบรรยากาศการเตรียมงานกีฬาสีประจำปีไว้ด้วย มีตั้งแต่การซ้อมแสตนเชียร์และเชียร์หลีดเดอร์ การเตรียมขบวนพาเหรด และการฝึกซ้อมและคัดเลือกนักกีฬาอินทนิล</p>
+          <div style="align-self: end; width: 120px; height: fit-content; border-radius: 0.5rem; background: var(--c-y1);">
+            <a href="https://drive.google.com/drive/folders/1YH6XyQYhZdMSr1RW4EpAWEqq9VLekhzx?fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJmZGlkFlEN2n5n_E4B7UT5onBDwi9bW57kff1zcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAafqb4Jchs9cVRy4gvBWtymQZtvkU1GDTSVgOIP0NkcpvHUUzAey-d7TBmh4uQ_aem_Z06UrFYG6baNKAMn1Qn9Ag"
+               target="_blank"
+               style="width: 100%;">
+              <h3 style="color: var(--c-w3); text-align: center; font-size: 1.5rem;">
+                ดูแกลเลอรี่
+              </h3>
+            </a>
+          </div>
+        </div>
+      </Block>
+    </Reveal>
+
+    <div style="height: 50px;"></div>
+
+    <Reveal :threshold="0.5">
+      <ContentFrame padding="var(--space-1)">
+        <h1 class="heading">Report</h1>
+      </ContentFrame>
+
+      <Block class="content_section">
+        <img src="/images/elements/mailsending.png" alt="Banner" class="banner">
+        <div class="information">
+          <h2>ฟอร์มรายงานปัญหา</h2>
+          <p style="text-indent: 1rem;">สำหรับสมาชิกอินทนิล ทุกคนสามารถแจ้งปัญหาภายในคณะสีให้พวกเราได้ผ่านช่องทางนี้เลย</p>
+          <div style="align-self: end; width: 120px; height: fit-content; border-radius: 0.5rem; background: var(--c-r1);">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfOeNkDUpoSWVAqh9u9sp4ZURc7Hc1lOkp5H1pC29SXX2k9eg/viewform?pli=1"
+               target="_blank"
+               style="width: 100%;">
+              <h3 style="color: var(--c-w3); text-align: center; font-size: 1.5rem;">
+                รายงานปัญหา
+              </h3>
+            </a>
+          </div>
+        </div>
       </Block>
     </Reveal>
 
@@ -179,7 +216,6 @@ import Reveal from "@/components/Property/Reveal.vue";
     </div>
 
     <div style="height: 4rem;"></div>
-
   </div>
 </template>
 
@@ -239,8 +275,18 @@ import Reveal from "@/components/Property/Reveal.vue";
   flex-direction: column;
 }
 
-.page .gallery .banner {
+.page .content_section .banner {
   width: 100%;
+  display: block; /*แก้ปัญหาเกิดช่องว่าง*/
+}
+
+.page .content_section .information {
+  width: 100%;
+  background: var(--c-main-bg2);
+
+  padding: var(--space-1);
+  display: flex;
+  flex-direction: column;
 }
 
 .page .backdrop {
