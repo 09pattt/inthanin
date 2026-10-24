@@ -42,15 +42,15 @@ onMounted(() => {
 </script>
 
 <template>
-  <nav class="navbar" ref="navbar" @click="toggleMenu">
+  <nav class="navbar" ref="navbar" @click="toggleMenu" style="display: none;"> <!-- ปิด NavigationTab เพราะ Demo ไม่ต้องใช้-->
     <div class="nav__space">
       <div class="nav__title">
         <!--<router-link to="/home" class="hover__no-bg nav__title_link"></router-link>-->
         <img src="/images/logo/inthanin.png" alt="">
-        <p>INTHANIN</p>
+        <p>Inthanin</p>
       </div>
       <div class="nav__menu">
-        <div class="nav__menu_button">
+        <div class="nav__menu_button" style="opacity: 0;"> <!-- เอา inline-style ออกถ้าจะแสดง-->
           <p>{{ isMenuOpened ? 'ปิด' : 'เมนู' }}</p>
           <img src="/images/icon/menu.svg" alt="">
         </div>
@@ -59,7 +59,7 @@ onMounted(() => {
 
     <div class="nav__path_bar">
       <p>
-        คณะสีอินทนิล >>
+        คณะสีอินทนิล /
         <strong>{{ route.meta.title }}</strong>
       </p>
     </div>
@@ -72,21 +72,21 @@ onMounted(() => {
         <ContentFrame pointer-events="none" padding="var(--space-2)">
           <div class="menu__content" ref="menu" :class="{ opened : isMenuOpened }">
             <h1 class="menu__header">เมนู</h1>
-            <div class="menu__link" :class="{ active: isMenuOpened }" style="--delay: 200ms;">
+            <div class="menu__link" :class="{ active: isMenuOpened }" style="--delay: 300ms;">
               <router-link to="/home" class="hover__no-bg menu__link_router"></router-link>
               <p>หน้าหลัก</p>
             </div>
             <div class="menu__link" :class="{ active: isMenuOpened }" style="--delay: 400ms;">
-              <router-link to="/about" class="hover__no-bg menu__link_router"></router-link>
+              <router-link to="/information" class="hover__no-bg menu__link_router"></router-link>
               <p>ข่าว/ประชาสัมพันธ์</p>
             </div>
-            <div class="menu__link" :class="{ active: isMenuOpened }" style="--delay: 600ms;">
-              <router-link to="/contact" class="hover__no-bg menu__link_router"></router-link>
-              <p>ช่องทางติดต่อ</p>
+            <div class="menu__link" :class="{ active: isMenuOpened }" style="--delay: 500ms;">
+              <router-link to="/merchandise" class="hover__no-bg menu__link_router"></router-link>
+              <p>สินค้า</p>
             </div>
-            <div class="menu__link" :class="{ active: isMenuOpened }" style="--delay: 800ms;">
-              <router-link to="/development" class="hover__no-bg menu__link_router"></router-link>
-              <p>การพัฒนา</p>
+            <div class="menu__link" :class="{ active: isMenuOpened }" style="--delay: 600ms;">
+              <router-link to="/gallery" class="hover__no-bg menu__link_router"></router-link>
+              <p>ภาพวันเตรียม</p>
             </div>
           </div>
         </ContentFrame>
@@ -122,7 +122,7 @@ onMounted(() => {
   .navbar .nav__title {
     width: fit-content;
     height: 100%;
-    filter: drop-shadow(0px 0px 10px var(--c-t1-w1));
+    /*filter: drop-shadow(0px 0px 10px var(--c-t1-w1));*/
     position: relative;
 
     display: flex;
@@ -263,6 +263,7 @@ onMounted(() => {
     height: fit-content;
     position: relative;
     transition: all 0.5s ease;
+    color: var(--c-t1-w1);
     opacity: 0;
   }
 
@@ -273,7 +274,8 @@ onMounted(() => {
 
   .menu .menu__link:hover {
     transition: all 0.25s ease;
-    background-color: var(--c-t3-w1);
+    color: var(--c-bl1);
+    background-color: var(--c-w3);
     padding-left: 0.5rem;
   }
 
@@ -283,7 +285,6 @@ onMounted(() => {
   }
 
   .menu .menu__link p {
-    color: var(--c-t1-w1);
     font-size: 1.5rem;
   }
 </style>

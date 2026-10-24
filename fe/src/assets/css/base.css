@@ -31,6 +31,7 @@
   --c-bl1: #181818;
   --c-bl2: #222222;
   --c-bl3: #282828;
+  --c-bl4: #343434;
   --c-t1-bl1: #181818a0;
   --c-t2-bl1: #18181880;
   --c-t3-bl1: #18181840;
@@ -80,10 +81,19 @@
   --space-3: 1.5rem;
   --space-4: 2rem;
 
+  --space-device-0: 0rem;
+  --space-device-1: 0.5rem;
+  --space-device-2: 1rem;
+  --space-device-3: 1.5rem;
+  --space-device-4: 2rem;
+
 
   --c-main-bg1: var(--c-w4);
   --c-main-bg2: var(--c-w3);
   --c-main-bg3: var(--c-w2);
+  --c-opposite-bg1: var(--c-bl2);
+  --c-opposite-bg2: var(--c-bl3);
+  --c-opposite-bg3: var(--c-gr1);
   --c-text: var(--c-bl1);
 }
 
@@ -91,23 +101,21 @@
   :root {
     --c-main-bg1: var(--c-bl2);
     --c-main-bg2: var(--c-bl3);
-    --c-main-bg3: var(--c-gr1);
+    --c-main-bg3: var(--c-bl4);
+    --c-opposite-bg1: var(--c-w4);
+    --c-opposite-bg2: var(--c-w3);
+    --c-opposite-bg3: var(--c-w2);
     --c-text: var(--c-w3);
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 700px) {
   :root {
-    /*
-
-    --f-size: var(--f-size-2);
-
-    --space-1: 1rem;
-    --space-2: 2rem;
-    --space-3: 3rem;
-    --space-4: 4rem;
-
-    */
+    --space-device-0: 0.5rem;
+    --space-device-1: 1rem;
+    --space-device-2: 1.5rem;
+    --space-device-3: 2rem;
+    --space-device-4: 2.5rem;
   }
 }
 

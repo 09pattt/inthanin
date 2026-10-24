@@ -11,15 +11,14 @@ onMounted(() => {
 </script>
 
 <template>
-  <div ref="app_content" class="app_content">
+  <main ref="app_content" class="app_content">
     <slot/>
-  </div>
+  </main>
 </template>
 
 <style scoped>
   .app_content {
-    width: 100%;
-    min-width: fit-content;
+    width: 100dvw;
     height: 100%;
     min-height: 100dvh;
     background-color: var(--c-main-bg1);

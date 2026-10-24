@@ -6,12 +6,10 @@ import Footer from "@/components/Footer.vue";
 
 <template>
   <NavigationTab/>
-  <main>
-    <Content>
-      <router-view/> <!--App.js COMPLETED REFACTORING. CONTINUE REFACTOR IN COMPONENT 'Home'--> <!--REFACTORING-->
-    </Content>
-    <Footer/>
-  </main>
+  <Content>
+    <router-view/> <!--App.js COMPLETED REFACTORING. CONTINUE REFACTOR IN COMPONENT 'Home'--> <!--REFACTORING-->
+  </Content>
+  <Footer/>
 </template>
 
 <style scoped>
