@@ -83,94 +83,61 @@ import Reveal from "@/components/Property/Reveal.vue";
 
     <div style="height: 4rem;"></div>
 
-    <Reveal :threshold="0.5">
+    <Reveal :threshold="0.4">
+
       <ContentFrame padding="var(--space-1)">
         <h1 class="heading">Apparel</h1>
       </ContentFrame>
 
-      <Block class="merchandise">
-        <SideSlider height="250px">
-          <div class="preview_wrapper">
-            <img src="/images/elements/jersey.png" alt="preview" class="preview">
-          </div>
+      <Block>
+        <section class="apparel">
+          <SideSlider height="250px" class="billboard">
+            <Reveal transform-in="translateY(20%)" class="product_block">
+              <div class="preview_wrapper">
+                <img src="/images/elements/jersey.png" alt="preview" class="preview">
+              </div>
+              <div class="information">
+                <h2 style="background: var(--c-p3); color: var(--c-w3); text-align: center;">
+                  Inthanin Jerseyyyyy
+                </h2>
+                <p style="text-indent: 1rem;">
+                  เรามากับการเปิดตัว<strong style="color: var(--c-p1);">เสื้อทีมคณะสีอินทนิลปี 2026 </strong>เป็นเสื้อ Jersey สีม่วงมีลวดลายตามธีมของคณะสีในปีนี้
+                </p>
+                <h1 style="color: var(--c-p1); text-align: end; margin-top: auto;">
+                  219.-
+                </h1>
+                <p class="comment-text" style="text-align: end;">เลื่อนดูเพิ่มเติม >></p>
+              </div>
+            </Reveal>
 
-          <div style="width: 1rem;"></div>
-
-          <Reveal :threshold="0.2" transform-in="translateY(50%)">
-            <div class="information">
-              <h2 style="background: var(--c-p3); color: var(--c-w3); text-align: center;">
-                Inthanin Jerseyyyyy
-              </h2>
-              <p style="text-indent: 1rem;">
-                เรามากับการเปิดตัว<strong style="color: var(--c-p1);">เสื้อทีมคณะสีอินทนิลปี 2026 </strong>เป็นเสื้อ Jersey สีม่วงมีลวดลายตามธีมของคณะสีในปีนี้
-              </p>
-              <h1 style="color: var(--c-p1); text-align: end; margin-top: auto;">
-                219.-
-              </h1>
-              <!--<p class="comment-text" style="text-align: end;">เลื่อนดูเพิ่มเติม >></p>-->
-            </div>
-          </Reveal>
-
-          <div style="width: 1rem;"></div>
-
-          <div class="preview_wrapper">
-            <img src="/images/elements/headband.png" alt="preview" class="preview">
-          </div>
-
-          <div style="width: 1rem;"></div>
-
-          <Reveal :threshold="0.2" transform-in="translateY(50%)">
-            <div class="information">
-              <h2 style="background: var(--c-p3); color: var(--c-w3); text-align: center;">
-                Inthanin Headband
-              </h2>
-              <p style="text-indent: 1rem;">
-                ครั้งนี้เรามากับ<strong style="color: var(--c-p1);">ผ้าคาดหัวทีมอินทนิล</strong> ไม่ว่าใครก็จับจองเป็นของตัวเองได้ในราคาเพียง
-              </p>
-              <h1 style="color: var(--c-p1); text-align: end; margin-top: auto;">
-                59.-
-              </h1>
-              <!--<p class="comment-text" style="text-align: end;">เลื่อนดูเพิ่มเติม >></p>-->
-            </div>
-          </Reveal>
-
-          <div style="width: 1rem;"></div>
-
-          <Reveal :threshold="0.2" transform-in="translateY(50%)">
-            <div class="condition">
-              <h3 style="color: var(--c-p1);">รายละเอียดการสั่งซื้อ</h3>
-              <p>- ผู้สั่งซื้อไม่จำเป็นต้องเป็นสมาชิกคณะสีอินทนิล</p>
-              <p>- ไม่สามารถยกเลิกการสั่งซื้อได้</p>
-              <p>- ชำระเงินผ่านช่องทางการโอน</p>
-              <p>- ตรวจสอบขนาดไซส์เสื้อให้ดีก่อนสั่งซื้อ</p>
-              <p>- วันรับเสื้อจะแจ้งผ่านช่องทางไอจีและเว็บไซต์</p>
-              <p>- อย่าลืมติดตามข่าวสารหลังทำการสั่งซื้อ</p>
-            </div>
-          </Reveal>
-
-          <div style="width: 1rem;"></div>
-
-          <!--
-          <Reveal :threshold="0.2" transform-in="translateY(50%)">
-            <div class="order">
-              <h2 style="color: var(--c-p1);">เพิ่มเติม</h2>
-              <p style="text-indent: 1rem;">
-                ตรวจสอบรายละเอียดของเสื้อหรือผ้าคาดและกรอกฟอร์มสั่งซื้อ กดดูได้ด้านล่างนี้ได้เลย
-              </p>
-              <router-link to="/shop/jersey2026"
-                           class="hover__no-bg"
-                           style="color: var(--c-w3); text-align: center; font-size: 1.5rem; background: var(--c-y1); margin-top: auto;"
-              >ดูเพิ่มเติม</router-link>
-            </div>
-          </Reveal>
-          -->
-        </SideSlider>
+            <Reveal transform-in="translateY(20%)" class="product_block">
+              <div class="preview_wrapper">
+                <img src="/images/elements/headband.png" alt="preview" class="preview">
+              </div>
+              <div class="information">
+                <h2 style="background: var(--c-p3); color: var(--c-w3); text-align: center;">
+                  Inthanin Headband
+                </h2>
+                <p style="text-indent: 1rem;">
+                  ครั้งนี้เรามากับ<strong style="color: var(--c-p1);">ผ้าคาดหัวทีมอินทนิล</strong> ไม่ว่าใครก็จับจองเป็นของตัวเองได้ในราคาเพียง
+                </p>
+                <h1 style="color: var(--c-p1); text-align: end; margin-top: auto;">
+                  59.-
+                </h1>
+                <p class="comment-text" style="text-align: end;">กดดูรายละเอียดด้านล่าง</p>
+              </div>
+            </Reveal>
+          </SideSlider>
+          <router-link to="/merchandise" class="button">
+            <h2 class="center-text" style="color: var(--c-w3);">ดูหน้าร้าน</h2>
+          </router-link>
+        </section>
       </Block>
     </Reveal>
 
     <div style="height: 50px;"></div>
 
-    <Reveal :threshold="0.3">
+    <Reveal :threshold="0.2">
       <ContentFrame padding="var(--space-1)">
         <h1 class="heading">2026 Gallery</h1>
       </ContentFrame>
@@ -195,7 +162,7 @@ import Reveal from "@/components/Property/Reveal.vue";
 
     <div style="height: 50px;"></div>
 
-    <Reveal :threshold="0.5">
+    <Reveal :threshold="0.4">
       <ContentFrame padding="var(--space-1)">
         <h1 class="heading">Report</h1>
       </ContentFrame>
@@ -320,21 +287,37 @@ import Reveal from "@/components/Property/Reveal.vue";
   align-items: end;
 }
 
-.page .merchandise .preview_wrapper {
+.page .apparel {
+  width: 100%;
+  height: fit-content;
+  background: var(--c-main-bg2);
+
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.page .apparel .billboard .product_block {
+  width: 100%;
   height: 100%;
-  width: 180px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.page .apparel .billboard .preview_wrapper {
+  height: 100%;
+  width: fit-content;
 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.page .merchandise .preview {
+.page .apparel .billboard .preview {
   height: 200px;
   filter: drop-shadow(0 0 2rem var(--c-t1-p2));
 }
 
-.page .merchandise .information {
+.page .apparel .billboard .information {
   width: 200px;
   height: 100%;
 
@@ -342,25 +325,8 @@ import Reveal from "@/components/Property/Reveal.vue";
   flex-direction: column;
 }
 
-.page .merchandise .condition {
-  height: 100%;
-  width: fit-content;
-  background: var(--c-main-bg3);
-  border-radius: var(--space-1);
-
-  padding: var(--space-1);
-  display: flex;
-  flex-direction: column;
-  overflow-y: scroll;
-}
-
-.page .merchandise .order {
-  height: 100%;
-  width: 200px;
-
-  padding: var(--space-1);
-  display: flex;
-  flex-direction: column;
+.page .apparel .button {
+  background: var(--c-p3);
 }
 
 .page .content_section .banner {

@@ -8,6 +8,7 @@
 .heading {
     font-family: Impact, sans-serif;
     color: var(--c-text-heading);
+    filter: drop-shadow(0 0 2rem var(--c-t1-p2));
 }
 
 .comment-text {
