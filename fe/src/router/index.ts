@@ -8,6 +8,8 @@ import {
 import Home from "@/pages/Home.vue";
 import Merchandise from "@/pages/Merchandise.vue";
 import Notfound from "@/pages/Notfound.vue";
+import Jersey from "@/pages/Merchandise/Jersey.vue";
+import Headband from "@/pages/Merchandise/Headband.vue";
 
 const routes: RouteRecordRaw[] = [
     {
@@ -29,6 +31,22 @@ const routes: RouteRecordRaw[] = [
         component: Merchandise,
         meta: {
             title: 'ร้านค้า'
+        }
+    },
+    {
+        path: '/merchandise/jersey',
+        name: 'jersey',
+        component: Jersey,
+        meta: {
+            title: 'ร้านค้า / เจอร์ซี'
+        }
+    },
+    {
+        path: '/merchandise/headband',
+        name: 'headband',
+        component: Headband,
+        meta: {
+            title: 'ร้านค้า / ผ้าคาดหัว'
         }
     },
     {

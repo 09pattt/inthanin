@@ -1,0 +1,176 @@
+<script setup lang="ts">
+import ContentFrame from "@/components/Template/ContentFrame.vue";
+import NavbarBlankSpace from "@/components/Template/NavbarBlankSpace.vue";
+</script>
+
+<template>
+  <div class="page">
+    <header class="header">
+      <div style="flex: 0 0 auto;">
+        <NavbarBlankSpace/>
+      </div>
+      <div class="container">
+        <ContentFrame>
+          <h1 class="title center-text">Headband</h1>
+          <div>
+            <img src="/images/elements/headband.png" alt="Preview" class="preview">
+          </div>
+        </ContentFrame>
+      </div>
+    </header>
+
+    <ContentFrame padding="var(--space-1)">
+      <section class="details">
+        <h2>รายละเอียดการสั่งซื้อ</h2>
+        <ul>
+          <li>ผู้สั่งซื้อไม่จำเป็นต้องอยู่ในคณะสีอินทนิล</li>
+          <li>ชำระเงินผ่านช่องทาง Mobile Banking</li>
+          <li>เมื่อทำการสั่งซื้อไปแล้ว จะไม่สามารถยกเลิกการสั่งซื้อได้</li>
+          <li>ติดตามการแจ้งผ่านทาง <a href="https://www.instagram.com/inthanin_triamnom?mdxt=MWdiZHl3YWhvenZtZA==">Instagram</a> คณะสีอินทนิล</li>
+        </ul>
+      </section>
+
+      <br>
+      <hr>
+      <br>
+
+      <section class="purchasing">
+        <h1>สรุปรายการ</h1>
+        <div class="indicator">
+          <p class="comment-text">รายการ</p>
+          <p class="comment-text">ราคา</p>
+        </div>
+        <div class="information">
+          <h2 class="product_name">Inthanin Headband</h2>
+          <h2 class="price">59.-</h2>
+        </div>
+        <p class="center-text comment-text">
+          <!-- ปิดไม่ให้พรีออเดอร์แล้ว
+          หมายเหตุ: หากต้องการสั่งซื้อมากกว่า 5 ผืน สามารถติดต่อได้ที่
+          <a href="https://www.instagram.com/inthanin_triamnom?mdxt=MWdiZHl3YWhvenZtZA==">Instagram</a>
+          -->
+          รายการนี้ปิดการสั่งซื้อรอบ พรี-ออเดอร์ ไปแล้ว
+        </p>
+        <div class="button">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSek3-gcdAEI5XOgaw5YSnOhyltK6k94gZ5s9yTOaq_AodXPZQ/closedform"
+             target="_blank">
+            <h3>พรี-ออเดอร์</h3>
+          </a>
+        </div>
+      </section>
+    </ContentFrame>
+
+  </div>
+</template>
+
+<style scoped>
+.page {
+  min-height: 100dvh;
+  background: #120812;
+  color: var(--c-w3);
+}
+
+.page .header {
+  width: 100%;
+  height: fit-content;
+  min-height: 100dvh;
+  /*filter: drop-shadow(0 0 var(--space-2) var(--c-t1-p2));*/
+  animation: fadeIn 2s ease;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.page .header .container {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page .header .title {
+  font-family: Impact, sans-serif;
+}
+
+.page .header .preview {
+  width: 100%;
+  max-height: 350px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 2rem var(--c-t3-w1));
+}
+
+.page .details {
+  width: 100%;
+}
+
+.page .details ul {
+  padding-left: 2rem;
+}
+
+/* Table */
+.page .table table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1rem;
+  text-align: left;
+  color: var(--c-w3);
+}
+
+/* Table Header */
+.page .table thead {
+  background-color: var(--c-bl1);
+}
+
+.page .table th {
+  padding: 12px 16px;
+  border-bottom: 2px solid #dee2e6;
+}
+
+/* Table Body */
+.page .table td {
+  padding: 12px 16px;
+  color: var(--c-w3);
+  border-bottom: 1px solid #e9ecef;
+}
+
+/* Zebra Striping */
+.page .table tbody tr:nth-child(odd) {
+  background-color: var(--c-bl3);
+}
+
+.page .table tbody tr:nth-child(even) {
+  background-color: var(--c-bl4);
+}
+
+.page .purchasing .indicator {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page .purchasing .information {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page .purchasing .button {
+  width: 100%;
+  display: flex;
+}
+
+.page .purchasing .button a {
+  width: 100%;
+  border-radius: var(--space-1);
+  background: var(--c-gr2); /* เปลี่ยนกลับเป็น var(--c-w3) ถ้าเปิดให้ซื้อ*/
+  color: var(--c-bl3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* ปิดไม่ให้ซื้อแล้ว*/
+  pointer-events: none;
+}
+</style>
