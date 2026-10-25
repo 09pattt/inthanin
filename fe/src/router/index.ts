@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Home from "@/pages/Home.vue";
+import Merchandise from "@/pages/Merchandise.vue";
 import Notfound from "@/pages/Notfound.vue";
 
 const routes = [
@@ -14,6 +15,14 @@ const routes = [
         component: Home,
         meta: {
             title: 'หน้าหลัก'
+        }
+    },
+    {
+        path: '/merchandise',
+        name: 'merchandise',
+        component: Merchandise,
+        meta: {
+            title: 'ร้านค้า'
         }
     },
     {
