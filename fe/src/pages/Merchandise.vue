@@ -26,7 +26,7 @@ import Window from "@/components/Template/Window.vue";
       <h1 style="font-family: Impact, sans-serif;">2026 Collection</h1>
       <hr>
       <div style="height: var(--space-1);"></div>
-      <h2>Apparel - เครื่องแต่งกาย</h2>
+      <h2 id="apparel_section">Apparel - เครื่องแต่งกาย</h2>
     </ContentFrame>
 
     <Window>
@@ -85,7 +85,7 @@ import Window from "@/components/Template/Window.vue";
 
     <ContentFrame padding="var(--space-1)">
       <div style="height: var(--space-1);"></div>
-      <h2>Sticker - สติ๊กเกอร์</h2>
+      <h2 id="sticker_section">Sticker - สติ๊กเกอร์</h2>
     </ContentFrame>
 
     <Window>
@@ -99,7 +99,7 @@ import Window from "@/components/Template/Window.vue";
           <div class="content">
             <div class="information">
               <p style="text-indent: 1rem;">
-                ???
+                -
               </p>
             </div>
             <div class="button_area" style="display: none;"> <!-- ซ่อนไว้ยังซื้อไม่ได้-->
@@ -196,4 +196,7 @@ import Window from "@/components/Template/Window.vue";
   justify-content: center;
   align-items: center;
 }
+
+#apparel_section { scroll-margin-top: 10rem; }
+#sticker_section { scroll-margin-top: 10rem; }
 </style>

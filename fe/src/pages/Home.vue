@@ -80,7 +80,7 @@ import RollingText from "@/components/Template/RollingText.vue";
             </Reveal>
           </SideSlider>
           <router-link to="/merchandise" class="button">
-            <h2 class="center-text">ดูเพิ่มเติม</h2>
+            <h2 class="center-text">ดูร้านค้า</h2>
           </router-link>
         </section>
       </Block>
@@ -99,8 +99,8 @@ import RollingText from "@/components/Template/RollingText.vue";
                  id="sticker"
                  tabindex="-1">
           <img src="/images/elements/inthanin_sticker.png" alt="Banner" class="banner">
-          <router-link to="/merchandise" class="button">
-            <h2 class="center-text">ดูร้านค้า</h2>
+          <router-link :to="{ name: 'merchandise', hash: '#sticker_section' }" class="button">
+            <h2 class="center-text">ดูเพิ่มเติม</h2>
           </router-link>
         </section>
       </Block>

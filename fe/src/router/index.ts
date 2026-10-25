@@ -59,30 +59,57 @@ const routes: RouteRecordRaw[] = [
     }
 ]
 
-const scrollBehavior: RouterScrollBehavior = (to, from, savedPosition) => {
-    // เคารพการตั้งค่า "ลดการเคลื่อนไหว" ของผู้ใช้ (Accessibility)
+// รอจน Element ที่มี id นี้ปรากฏใน DOM (หรือหมดเวลา)
+function waitForElement(id: string, timeout = 1500): Promise<HTMLElement | null> {
+    return new Promise((resolve) => {
+        const existing = document.getElementById(id)
+        if (existing) return resolve(existing)
+
+        const timer = window.setTimeout(() => {
+            observer.disconnect()
+            resolve(null)
+        }, timeout)
+
+        const observer = new MutationObserver(() => {
+            const el = document.getElementById(id)
+            if (el) {
+                window.clearTimeout(timer)
+                observer.disconnect()
+                resolve(el)
+            }
+        })
+        observer.observe(document.body, { childList: true, subtree: true })
+    })
+}
+
+const scrollBehavior: RouterScrollBehavior = async (to, from, savedPosition) => {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     const smooth: ScrollBehavior = reduceMotion ? 'auto' : 'smooth'
 
-    // 1) กดปุ่ม Back/Forward: กลับไปตำแหน่งเดิม
+    // 1) Back/Forward
     if (savedPosition) {
         return { ...savedPosition, behavior: smooth }
     }
 
-    // 2) URL มี Hash: เลื่อนไปที่ Element โดยเผื่อระยะตาม scroll-margin-top
+    // 2) มี Hash: รอ Element แล้วเลื่อนไป
     if (to.hash) {
-        const el = document.getElementById(decodeURIComponent(to.hash.slice(1)))
-        const margin = el ? parseFloat(getComputedStyle(el).scrollMarginTop) || 0 : 0
-        return { el: to.hash, top: margin, behavior: smooth }
+        const id = decodeURIComponent(to.hash.slice(1))
+        const el = await waitForElement(id)
+
+        // ไม่พบ Element (id ผิดหรือหมดเวลา): ขึ้นบนสุดดีกว่าค้างตำแหน่งเดิม
+        if (!el) return { top: 0, left: 0, behavior: 'auto' }
+
+        const margin = parseFloat(getComputedStyle(el).scrollMarginTop) || 0
+        return {
+            el,
+            top: margin,
+            // ข้ามหน้า: เลื่อนทันที / หน้าเดิม: เลื่อนนุ่มนวล
+            behavior: to.path === from.path ? smooth : 'auto',
+        }
     }
 
-    // 3) เปลี่ยนไปหน้าอื่น: ขึ้นบนสุดทันที
-    //    ถ้าอยู่หน้าเดิม (เช่น เปลี่ยน query) ให้เลื่อนแบบนุ่มนวล
-    return {
-        top: 0,
-        left: 0,
-        behavior: to.path === from.path ? smooth : 'auto'
-    }
+    // 3) เปลี่ยนหน้าปกติ: ขึ้นบนสุด
+    return { top: 0, left: 0, behavior: to.path === from.path ? smooth : 'auto' }
 }
 
 const router = createRouter({
