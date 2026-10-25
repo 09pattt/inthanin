@@ -77,16 +77,20 @@ onMounted(() => {
               <p>หน้าหลัก</p>
             </div>
             <div class="menu__link" :class="{ active: isMenuOpened }" style="--delay: 400ms;">
-              <router-link to="/information" class="hover__no-bg menu__link_router"></router-link>
-              <p>ข่าว/ประชาสัมพันธ์</p>
+              <router-link to="/merchandise" class="hover__no-bg menu__link_router"></router-link>
+              <p>ร้านค้า</p>
             </div>
             <div class="menu__link" :class="{ active: isMenuOpened }" style="--delay: 500ms;">
-              <router-link to="/merchandise" class="hover__no-bg menu__link_router"></router-link>
-              <p>สินค้า</p>
+              <a href="https://drive.google.com/drive/folders/1YH6XyQYhZdMSr1RW4EpAWEqq9VLekhzx?fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJmZGlkFlEN2n5n_E4B7UT5onBDwi9bW57kff1zcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAafqb4Jchs9cVRy4gvBWtymQZtvkU1GDTSVgOIP0NkcpvHUUzAey-d7TBmh4uQ_aem_Z06UrFYG6baNKAMn1Qn9Ag"
+                 class="hover__no-bg menu__link_router"
+                 target="_blank"></a>
+              <p>ภาพวันเตรียม</p>
             </div>
             <div class="menu__link" :class="{ active: isMenuOpened }" style="--delay: 600ms;">
-              <router-link to="/gallery" class="hover__no-bg menu__link_router"></router-link>
-              <p>ภาพวันเตรียม</p>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfOeNkDUpoSWVAqh9u9sp4ZURc7Hc1lOkp5H1pC29SXX2k9eg/viewform?pli=1"
+                 class="hover__no-bg menu__link_router"
+                 target="_blank"></a>
+              <p>รายงานปัญหา</p>
             </div>
           </div>
         </ContentFrame>
