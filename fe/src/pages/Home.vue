@@ -4,6 +4,7 @@ import ContentFrame from "@/components/Template/ContentFrame.vue";
 import Block from "@/components/Template/Block.vue";
 import SideSlider from "@/components/Template/SideSlider.vue";
 import Reveal from "@/components/Property/Reveal.vue";
+import HomeIndex from "@/components/Object/HomeIndex.vue";
 </script>
 
 <template>
@@ -26,60 +27,7 @@ import Reveal from "@/components/Property/Reveal.vue";
 
     <div style="height: 50dvh;"></div>
 
-    <Block>
-      <section class="index">
-        <div class="item">
-          <h3 style="color: var(--c-gr2); font-family: Impact, sans-serif;" class="join-text title">Page index</h3>
-          <div class="description">
-            <p style="color: var(--c-gr2); margin-left: var(--space-1); font-weight: bold;" class="join-text">เลือกดูหัวข้อที่สนใจ</p>
-          </div>
-        </div>
-        <Reveal transform-in="translateX(20%)">
-          <div class="item">
-            <h1 class="title">Apparel</h1>
-            <div class="description">
-              <p>เครื่องแต่งกาย</p>
-            </div>
-          </div>
-        </Reveal>
-        <hr>
-        <Reveal transform-in="translateX(20%)">
-          <div class="item">
-            <h1 class="title">Sticker</h1>
-            <div class="description">
-              <p>สติ๊กเกอร์</p>
-            </div>
-          </div>
-        </Reveal>
-        <hr>
-        <Reveal transform-in="translateX(20%)">
-          <div class="item">
-            <h1 class="title">Gallery</h1>
-            <div class="description">
-              <p>ภาพบรรยากาศ</p>
-            </div>
-          </div>
-        </Reveal>
-        <hr>
-        <Reveal transform-in="translateX(20%)">
-          <div class="item">
-            <h2 class="title">Report</h2>
-            <div class="description">
-              <p>แจ้งปัญหา</p>
-            </div>
-          </div>
-        </Reveal>
-        <hr>
-        <Reveal transform-in="translateX(20%)">
-          <div class="item">
-            <h2 class="title">Information</h2>
-            <div class="description">
-              <p>ข้อมูลและช่องทางติดต่อ</p>
-            </div>
-          </div>
-        </Reveal>
-      </section>
-    </Block>
+    <home-index></home-index>
 
     <div style="height: 4rem;"></div>
 
@@ -90,7 +38,9 @@ import Reveal from "@/components/Property/Reveal.vue";
       </ContentFrame>
 
       <Block>
-        <section class="apparel">
+        <section class="apparel"
+                 id="apparel"
+                 tabindex="-1">
           <SideSlider height="250px" class="billboard">
             <Reveal transform-in="translateY(20%)" class="product_block">
               <div class="preview_wrapper">
@@ -144,7 +94,9 @@ import Reveal from "@/components/Property/Reveal.vue";
       </ContentFrame>
 
       <Block>
-        <section class="banner_section">
+        <section class="banner_section"
+                 id="sticker"
+                 tabindex="-1">
           <img src="/images/elements/inthanin_sticker.png" alt="Banner" class="banner">
           <router-link to="/merchandise" class="button">
             <h2 class="center-text">ดูเพิ่มเติม</h2>
@@ -161,7 +113,9 @@ import Reveal from "@/components/Property/Reveal.vue";
       </ContentFrame>
 
       <Block>
-        <section class="banner_section">
+        <section class="banner_section"
+                 id="gallery"
+                 tabindex="-1">
           <img src="/images/elements/inthanin_gallery.png" alt="Banner" class="banner">
           <div class="information">
             <h2>ภาพบรรยากาศวันเตรียม</h2>
@@ -185,7 +139,9 @@ import Reveal from "@/components/Property/Reveal.vue";
       </ContentFrame>
 
       <Block>
-        <section class="banner_section">
+        <section class="banner_section"
+                 id="report"
+                 tabindex="-1">
           <img src="/images/elements/mailsending.png" alt="Banner" class="banner">
           <div class="information">
             <h2>ฟอร์มรายงานปัญหา</h2>
@@ -194,7 +150,7 @@ import Reveal from "@/components/Property/Reveal.vue";
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSfOeNkDUpoSWVAqh9u9sp4ZURc7Hc1lOkp5H1pC29SXX2k9eg/viewform?pli=1"
              target="_blank"
              class="button"
-             style="background: var(--c-r1);">
+             style="background: var(--c-y1);">
             <h2 class="center-text">รายงานปัญหา</h2>
           </a>
         </section>
@@ -258,6 +214,7 @@ import Reveal from "@/components/Property/Reveal.vue";
     </div>
 
     <div style="height: 4rem;"></div>
+    <div id="information" tabindex="-1"></div>
   </div>
 </template>
 
@@ -271,36 +228,6 @@ import Reveal from "@/components/Property/Reveal.vue";
 
   display: flex;
   flex-direction: column;
-}
-
-.page .index {
-  width: 100%;
-  height: fit-content;
-
-  background: var(--c-main-bg2);
-
-  padding: var(--space-1);
-}
-
-.page .index .item {
-  width: 100%;
-  height: fit-content;
-  cursor: pointer;
-
-  display: flex;
-  justify-content: space-between;
-}
-
-.page .index .item .title {
-  font-family: Impact, sans-serif;
-}
-
-.page .index .item .description {
-  width: fit-content;
-  /*height: 100%; ถ้าเอาออกความสูงจะเต็มให้อัตโนมัติ*/
-
-  display: flex;
-  align-items: end;
 }
 
 .page .apparel {
@@ -404,4 +331,12 @@ import Reveal from "@/components/Property/Reveal.vue";
     animation-range: 20dvh 100dvh;
   }
 }
+
+/* ตั้ง margin ให้สำหรับ sections ที่จะรองรับการเลื่อนจาก index*/
+
+#apparel { scroll-margin-top: 10rem; }
+#sticker { scroll-margin-top: 10rem; }
+#gallery { scroll-margin-top: 10rem; }
+#report { scroll-margin-top: 10rem; }
+#information { scroll-margin-top: 10rem; }
 </style>
