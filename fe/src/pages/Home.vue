@@ -26,9 +26,66 @@ import Reveal from "@/components/Property/Reveal.vue";
 
     <div style="height: 50dvh;"></div>
 
+    <Block>
+      <section class="index">
+        <div class="item">
+          <h3 style="color: var(--c-gr2); font-family: Impact, sans-serif;" class="join-text title">Page index</h3>
+          <div class="description">
+            <p style="color: var(--c-gr2); margin-left: var(--space-1); font-weight: bold;" class="join-text">เลือกดูหัวข้อที่สนใจ</p>
+          </div>
+        </div>
+        <Reveal transform-in="translateX(20%)">
+          <div class="item">
+            <h1 class="title">Apparel</h1>
+            <div class="description">
+              <p>เครื่องแต่งกาย</p>
+            </div>
+          </div>
+        </Reveal>
+        <hr>
+        <Reveal transform-in="translateX(20%)">
+          <div class="item">
+            <h1 class="title">Sticker</h1>
+            <div class="description">
+              <p>สติ๊กเกอร์</p>
+            </div>
+          </div>
+        </Reveal>
+        <hr>
+        <Reveal transform-in="translateX(20%)">
+          <div class="item">
+            <h1 class="title">Gallery</h1>
+            <div class="description">
+              <p>ภาพบรรยากาศ</p>
+            </div>
+          </div>
+        </Reveal>
+        <hr>
+        <Reveal transform-in="translateX(20%)">
+          <div class="item">
+            <h2 class="title">Report</h2>
+            <div class="description">
+              <p>แจ้งปัญหา</p>
+            </div>
+          </div>
+        </Reveal>
+        <hr>
+        <Reveal transform-in="translateX(20%)">
+          <div class="item">
+            <h2 class="title">Contact</h2>
+            <div class="description">
+              <p>ข้อมูลและช่องทางติดต่อ</p>
+            </div>
+          </div>
+        </Reveal>
+      </section>
+    </Block>
+
+    <div style="height: 4rem;"></div>
+
     <Reveal :threshold="0.5">
       <ContentFrame padding="var(--space-1)">
-        <h1 class="heading">Merchandise</h1>
+        <h1 class="heading">Apparel</h1>
       </ContentFrame>
 
       <Block class="merchandise">
@@ -93,6 +150,7 @@ import Reveal from "@/components/Property/Reveal.vue";
 
           <div style="width: 1rem;"></div>
 
+          <!--
           <Reveal :threshold="0.2" transform-in="translateY(50%)">
             <div class="order">
               <h2 style="color: var(--c-p1);">เพิ่มเติม</h2>
@@ -105,6 +163,7 @@ import Reveal from "@/components/Property/Reveal.vue";
               >ดูเพิ่มเติม</router-link>
             </div>
           </Reveal>
+          -->
         </SideSlider>
       </Block>
     </Reveal>
@@ -229,7 +288,36 @@ import Reveal from "@/components/Property/Reveal.vue";
 
   display: flex;
   flex-direction: column;
+}
 
+.page .index {
+  width: 100%;
+  height: fit-content;
+
+  background: var(--c-main-bg2);
+
+  padding: var(--space-1);
+}
+
+.page .index .item {
+  width: 100%;
+  height: fit-content;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.page .index .item .title {
+  font-family: Impact, sans-serif;
+}
+
+.page .index .item .description {
+  width: fit-content;
+  /*height: 100%; ถ้าเอาออกความสูงจะเต็มให้อัตโนมัติ*/
+
+  display: flex;
+  align-items: end;
 }
 
 .page .merchandise .preview_wrapper {
@@ -306,7 +394,7 @@ import Reveal from "@/components/Property/Reveal.vue";
   .page .backdrop {
     animation: fade-out linear both;
     animation-timeline: scroll(root block); /* ต้องเขียนหลัง shorthand `animation` */
-    animation-range: 0 50dvh;
+    animation-range: 20dvh 100dvh;
   }
 }
 </style>

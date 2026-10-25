@@ -6,6 +6,7 @@
 }
 
 .heading {
+    font-family: Impact, sans-serif;
     color: var(--c-text-heading);
 }
 
