@@ -72,7 +72,7 @@ import Reveal from "@/components/Property/Reveal.vue";
         <hr>
         <Reveal transform-in="translateX(20%)">
           <div class="item">
-            <h2 class="title">Contact</h2>
+            <h2 class="title">Information</h2>
             <div class="description">
               <p>ข้อมูลและช่องทางติดต่อ</p>
             </div>
@@ -129,59 +129,75 @@ import Reveal from "@/components/Property/Reveal.vue";
             </Reveal>
           </SideSlider>
           <router-link to="/merchandise" class="button">
-            <h2 class="center-text" style="color: var(--c-w3);">ดูหน้าร้าน</h2>
+            <h2 class="center-text">ดูเพิ่มเติม</h2>
           </router-link>
         </section>
       </Block>
     </Reveal>
 
-    <div style="height: 50px;"></div>
+    <div style="height: 4rem;"></div>
+
+    <Reveal :threshold="0.4">
+
+      <ContentFrame padding="var(--space-1)">
+        <h1 class="heading">Sticker</h1>
+      </ContentFrame>
+
+      <Block>
+        <section class="banner_section">
+          <img src="/images/elements/inthanin_sticker.png" alt="Banner" class="banner">
+          <router-link to="/merchandise" class="button">
+            <h2 class="center-text">ดูเพิ่มเติม</h2>
+          </router-link>
+        </section>
+      </Block>
+    </Reveal>
+
+    <div style="height: 4rem;"></div>
 
     <Reveal :threshold="0.2">
       <ContentFrame padding="var(--space-1)">
         <h1 class="heading">2026 Gallery</h1>
       </ContentFrame>
 
-      <Block class="content_section">
-        <img src="/images/elements/inthanin_gallery.png" alt="Banner" class="banner">
-        <div class="information">
-          <h2>ภาพบรรยากาศวันเตรียม</h2>
-          <p style="text-indent: 1rem;">คณะสีอินทนิลเรามีตากล้องช่วยเก็บภาพบรรยากาศการเตรียมงานกีฬาสีประจำปีไว้ด้วย มีตั้งแต่การซ้อมแสตนเชียร์และเชียร์หลีดเดอร์ การเตรียมขบวนพาเหรด และการฝึกซ้อมและคัดเลือกนักกีฬาอินทนิล</p>
-          <div style="align-self: end; width: 120px; height: fit-content; border-radius: 0.5rem; background: var(--c-y1);">
-            <a href="https://drive.google.com/drive/folders/1YH6XyQYhZdMSr1RW4EpAWEqq9VLekhzx?fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJmZGlkFlEN2n5n_E4B7UT5onBDwi9bW57kff1zcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAafqb4Jchs9cVRy4gvBWtymQZtvkU1GDTSVgOIP0NkcpvHUUzAey-d7TBmh4uQ_aem_Z06UrFYG6baNKAMn1Qn9Ag"
-               target="_blank"
-               style="width: 100%;">
-              <h3 style="color: var(--c-w3); text-align: center; font-size: 1.5rem;">
-                ดูแกลเลอรี่
-              </h3>
-            </a>
+      <Block>
+        <section class="banner_section">
+          <img src="/images/elements/inthanin_gallery.png" alt="Banner" class="banner">
+          <div class="information">
+            <h2>ภาพบรรยากาศวันเตรียม</h2>
+            <p style="text-indent: 1rem;">คณะสีอินทนิลเรามีตากล้องช่วยเก็บภาพบรรยากาศการเตรียมงานกีฬาสีประจำปีไว้ด้วย มีตั้งแต่การซ้อมแสตนเชียร์และเชียร์หลีดเดอร์ การเตรียมขบวนพาเหรด และการฝึกซ้อมและคัดเลือกนักกีฬาอินทนิล</p>
           </div>
-        </div>
+          <a href="https://drive.google.com/drive/folders/1YH6XyQYhZdMSr1RW4EpAWEqq9VLekhzx?fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJmZGlkFlEN2n5n_E4B7UT5onBDwi9bW57kff1zcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAafqb4Jchs9cVRy4gvBWtymQZtvkU1GDTSVgOIP0NkcpvHUUzAey-d7TBmh4uQ_aem_Z06UrFYG6baNKAMn1Qn9Ag"
+             target="_blank"
+             class="button"
+             style="background: var(--c-y1);">
+            <h2 class="center-text">ดูแกลเลอรี่</h2>
+          </a>
+        </section>
       </Block>
     </Reveal>
 
-    <div style="height: 50px;"></div>
+    <div style="height: 4rem;"></div>
 
-    <Reveal :threshold="0.4">
+    <Reveal :threshold="0.2">
       <ContentFrame padding="var(--space-1)">
         <h1 class="heading">Report</h1>
       </ContentFrame>
 
-      <Block class="content_section">
-        <img src="/images/elements/mailsending.png" alt="Banner" class="banner">
-        <div class="information">
-          <h2>ฟอร์มรายงานปัญหา</h2>
-          <p style="text-indent: 1rem;">สำหรับสมาชิกอินทนิล ทุกคนสามารถแจ้งปัญหาภายในคณะสีให้พวกเราได้ผ่านช่องทางนี้เลย</p>
-          <div style="align-self: end; width: 120px; height: fit-content; border-radius: 0.5rem; background: var(--c-r1);">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfOeNkDUpoSWVAqh9u9sp4ZURc7Hc1lOkp5H1pC29SXX2k9eg/viewform?pli=1"
-               target="_blank"
-               style="width: 100%;">
-              <h3 style="color: var(--c-w3); text-align: center; font-size: 1.5rem;">
-                รายงานปัญหา
-              </h3>
-            </a>
+      <Block>
+        <section class="banner_section">
+          <img src="/images/elements/mailsending.png" alt="Banner" class="banner">
+          <div class="information">
+            <h2>ฟอร์มรายงานปัญหา</h2>
+            <p style="text-indent: 1rem;">สำหรับสมาชิกอินทนิล ทุกคนสามารถแจ้งปัญหาภายในคณะสีให้พวกเราได้ผ่านช่องทางนี้เลย</p>
           </div>
-        </div>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfOeNkDUpoSWVAqh9u9sp4ZURc7Hc1lOkp5H1pC29SXX2k9eg/viewform?pli=1"
+             target="_blank"
+             class="button"
+             style="background: var(--c-r1);">
+            <h2 class="center-text">รายงานปัญหา</h2>
+          </a>
+        </section>
       </Block>
     </Reveal>
 
@@ -327,6 +343,31 @@ import Reveal from "@/components/Property/Reveal.vue";
 
 .page .apparel .button {
   background: var(--c-p3);
+  color: var(--c-w3);
+}
+
+
+.page .banner_section {
+  width: 100%;
+  height: fit-content;
+  background: var(--c-main-bg2);
+
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.page .banner_section .banner {
+  width: 100%;
+  display: block;
+}
+
+.page .banner_section .information {
+  padding: var(--space-1);
+}
+
+.page .banner_section .button {
+  background: var(--c-p3);
+  color: var(--c-w3);
 }
 
 .page .content_section .banner {
