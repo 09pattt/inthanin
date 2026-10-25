@@ -5,6 +5,7 @@ import Block from "@/components/Template/Block.vue";
 import SideSlider from "@/components/Template/SideSlider.vue";
 import Reveal from "@/components/Property/Reveal.vue";
 import HomeIndex from "@/components/Object/HomeIndex.vue";
+import RollingText from "@/components/Template/RollingText.vue";
 </script>
 
 <template>
@@ -159,59 +160,7 @@ import HomeIndex from "@/components/Object/HomeIndex.vue";
 
     <div style="height: 4rem;"></div>
 
-    <div class="rolling_text">
-      <ContentFrame>
-        <Reveal root-margin="-150px 0px" transform-in="scale(0.8)">
-          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">I</h1>
-          <div style="height: 1rem;"></div>
-        </Reveal>
-        <Reveal root-margin="-150px 0px" transform-in="scale(0.8)">
-          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">N</h1>
-          <div style="height: 1rem;"></div>
-        </Reveal>
-        <Reveal root-margin="-150px 0px" transform-in="scale(0.8)">
-          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">T</h1>
-          <div style="height: 1rem;"></div>
-        </Reveal>
-        <Reveal root-margin="-150px 0px" transform-in="scale(0.8)">
-          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">H</h1>
-          <div style="height: 1rem;"></div>
-        </Reveal>
-        <Reveal root-margin="-150px 0px" transform-in="scale(0.8)">
-          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">A</h1>
-          <div style="height: 1rem;"></div>
-        </Reveal>
-        <Reveal root-margin="-150px 0px" transform-in="scale(0.8)">
-          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">N</h1>
-          <div style="height: 1rem;"></div>
-        </Reveal>
-        <Reveal root-margin="-150px 0px" transform-in="scale(0.8)">
-          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">I</h1>
-          <div style="height: 1rem;"></div>
-        </Reveal>
-        <Reveal root-margin="-150px 0px" transform-in="scale(0.8)">
-          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">N</h1>
-          <div style="height: 1rem;"></div>
-        </Reveal>
-        <Reveal root-margin="-150px 0px" transform-in="scale(0.8)">
-          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">2</h1>
-          <div style="height: 1rem;"></div>
-        </Reveal>
-        <Reveal root-margin="-150px 0px" transform-in="scale(0.8)">
-          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">0</h1>
-          <div style="height: 1rem;"></div>
-        </Reveal>
-        <Reveal root-margin="-150px 0px" transform-in="scale(0.8)">
-          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">2</h1>
-          <div style="height: 1rem;"></div>
-        </Reveal>
-        <Reveal root-margin="-150px 0px" transform-in="scale(0.8)">
-          <h1 class="center-text heading" style="color: var(--c-p2); font-size: 5rem;">6</h1>
-          <div style="height: 1rem;"></div>
-        </Reveal>
-      </ContentFrame>
-
-    </div>
+    <RollingText text="INTHANIN2026" color="var(--c-p2)"/>
 
     <div style="height: 4rem;"></div>
     <div id="information" tabindex="-1"></div>
