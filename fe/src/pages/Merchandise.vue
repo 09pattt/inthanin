@@ -75,7 +75,7 @@ import Block from "@/components/Template/Block.vue";
             <div class="button_area">
               <p class="comment-text">ดูรายละเอียดและสั่งซื้อ</p>
               <div style="width: var(--space-1);"></div>
-              <router-link to="/merchandise/jeysey2026" class="button">
+              <router-link to="/merchandise/headband" class="button">
                 <img src="/images/icon/shopping_cart.svg" alt="Checkout">
               </router-link>
             </div>
