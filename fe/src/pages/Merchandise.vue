@@ -26,6 +26,37 @@ import Window from "@/components/Template/Window.vue";
       <h1 style="font-family: Impact, sans-serif;">2026 Collection</h1>
       <hr>
       <div style="height: var(--space-1);"></div>
+      <h2 id="merchandise_section">Merchandise - ของที่ระลึก</h2>
+    </ContentFrame>
+
+    <Window>
+      <section class="product_window">
+        <header>
+          <h2>Pin & Sticker</h2>
+          <h2>เริ่มต้น 9.-</h2>
+        </header>
+        <Reveal class="container" transform-in="translateX(20%)">
+          <img src="/images/elements/inthanin_stickers_mockup.png" alt="Preview" class="preview">
+          <div class="content">
+            <div class="information">
+              <p style="text-indent: 1rem;">
+                -
+              </p>
+            </div>
+            <div class="button_area">
+              <p class="comment-text">ดูรายละเอียดและสั่งซื้อ</p>
+              <div style="width: var(--space-1);"></div>
+              <router-link to="merchandise/merchandise2026" class="button">
+                <img src="/images/icon/shopping_cart.svg" alt="Checkout">
+              </router-link>
+            </div>
+          </div>
+        </Reveal>
+      </section>
+    </Window>
+
+    <ContentFrame padding="var(--space-1)">
+      <div style="height: var(--space-1);"></div>
       <h2 id="apparel_section">Apparel - เครื่องแต่งกาย</h2>
     </ContentFrame>
 
@@ -33,7 +64,7 @@ import Window from "@/components/Template/Window.vue";
       <section class="product_window">
         <header>
           <h2>Inthanin Jersey 2026</h2>
-          <h2>219.-</h2>
+          <h2>Sold Out</h2>
         </header>
         <Reveal class="container" transform-in="translateX(20%)">
           <img src="/images/elements/jersey.png" alt="Preview" class="preview">
@@ -64,7 +95,7 @@ import Window from "@/components/Template/Window.vue";
       <section class="product_window">
         <header>
           <h2>Headband</h2>
-          <h2>59.-</h2>
+          <h2>Sold Out</h2>
         </header>
         <Reveal class="container" transform-in="translateX(20%)">
           <img src="/images/elements/headband.png" alt="Preview" class="preview">
@@ -89,44 +120,13 @@ import Window from "@/components/Template/Window.vue";
       </section>
     </Window>
 
-    <ContentFrame padding="var(--space-1)">
-      <div style="height: var(--space-1);"></div>
-      <h2 id="sticker_section">Merchandise - ของที่ระลึก</h2>
-    </ContentFrame>
-
-    <Window>
-      <section class="product_window">
-        <header>
-          <h2>Coming soon!</h2>
-          <h2>XX.-</h2>
-        </header>
-        <Reveal class="container" transform-in="translateX(20%)">
-          <img src="/images/elements/inthanin_stickers_mockup.png" alt="Preview" class="preview">
-          <div class="content">
-            <div class="information">
-              <p style="text-indent: 1rem;">
-                -
-              </p>
-            </div>
-            <div class="button_area">
-              <p class="comment-text">ดูรายละเอียดและสั่งซื้อ</p>
-              <div style="width: var(--space-1);"></div>
-              <router-link to="merchandise/merchandise2026" class="button">
-                <img src="/images/icon/shopping_cart.svg" alt="Checkout">
-              </router-link>
-            </div>
-          </div>
-        </Reveal>
-      </section>
-    </Window>
-
-    <div style="height: 100dvh; display: flex; align-items: center;">
+    <footer style="height: 100dvh; display: flex; align-items: center;">
       <ContentFrame>
         <div style="padding: 0 2rem;">
           <img src="/images/elements/merchandise_hero.png" alt="" style="width: 100%;">
         </div>
       </ContentFrame>
-    </div>
+    </footer>
   </div>
 </template>
 
@@ -203,6 +203,6 @@ import Window from "@/components/Template/Window.vue";
   align-items: center;
 }
 
-#apparel_section { scroll-margin-top: 10rem; }
-#sticker_section { scroll-margin-top: 10rem; }
+#merchandise_section { scroll-margin-top: 10rem; }
+#apparel_section { scroll-margin-top: 6rem; }
 </style>

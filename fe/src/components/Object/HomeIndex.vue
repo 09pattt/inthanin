@@ -9,8 +9,8 @@ interface IndexItem {
 }
 
 const items: readonly IndexItem[] = [
-  { id: "apparel", title: "Apparel", description: "เครื่องแต่งกาย" },
   { id: "merchandise", title: "Merchandise", description: "ของที่ระลึก" },
+  { id: "apparel", title: "Apparel", description: "เครื่องแต่งกาย" },
   { id: "gallery", title: "Gallery", description: "ภาพบรรยากาศ" },
   { id: "report", title: "Report", description: "แจ้งปัญหา" },
   { id: "information", title: "Information", description: "ข้อมูลและช่องทางติดต่อ" },

@@ -35,6 +35,26 @@ import RollingText from "@/components/Template/RollingText.vue";
     <Reveal :threshold="0.4">
 
       <ContentFrame padding="var(--space-1)">
+        <h1 class="heading">Merchandise</h1>
+      </ContentFrame>
+
+      <Block>
+        <section class="banner_section"
+                 id="merchandise"
+                 tabindex="-1">
+          <img src="/images/elements/inthanin_sticker.png" alt="Banner" class="banner">
+          <router-link to="/merchandise" class="button">
+            <h2 class="center-text">ดูเพิ่มเติม/สั่งซื้อ</h2>
+          </router-link>
+        </section>
+      </Block>
+    </Reveal>
+
+    <div style="height: 4rem;"></div>
+
+    <Reveal :threshold="0.4">
+
+      <ContentFrame padding="var(--space-1)">
         <h1 class="heading">Apparel</h1>
       </ContentFrame>
 
@@ -54,10 +74,12 @@ import RollingText from "@/components/Template/RollingText.vue";
                 <p style="text-indent: 1rem;">
                   เรามากับการเปิดตัว<strong style="color: var(--c-p1);">เสื้อทีมคณะสีอินทนิลปี 2026 </strong>เป็นเสื้อ Jersey สีม่วงมีลวดลายตามธีมของคณะสีในปีนี้
                 </p>
-                <h2 style="color: var(--c-gr1); text-align: end; margin-top: auto;">
-                  SOLD OUT
+                <h2 class="price">
+                  Sold Out
                 </h2>
+                <!--
                 <p class="comment-text" style="text-align: end;">เลื่อนดูเพิ่มเติม >></p>
+                -->
               </div>
             </Reveal>
 
@@ -72,35 +94,17 @@ import RollingText from "@/components/Template/RollingText.vue";
                 <p style="text-indent: 1rem;">
                   ครั้งนี้เรามากับ<strong style="color: var(--c-p1);">ผ้าคาดหัวทีมอินทนิล</strong> ไม่ว่าใครก็จับจองเป็นของตัวเองได้ในราคาเพียง
                 </p>
-                <h2 style="color: var(--c-gr1); text-align: end; margin-top: auto;">
-                  SOLD OUT
+                <h2 class="price">
+                  Sold Out
                 </h2>
+                <!--
                 <p class="comment-text" style="text-align: end;">กดดูรายละเอียดด้านล่าง</p>
+                -->
               </div>
             </Reveal>
           </SideSlider>
-          <router-link to="/merchandise" class="button">
+          <router-link :to="{ name: 'merchandise', hash: '#apparel_section' }" class="button">
             <h2 class="center-text">ดูคอลเลกชั่น</h2>
-          </router-link>
-        </section>
-      </Block>
-    </Reveal>
-
-    <div style="height: 4rem;"></div>
-
-    <Reveal :threshold="0.4">
-
-      <ContentFrame padding="var(--space-1)">
-        <h1 class="heading">Merchandise</h1>
-      </ContentFrame>
-
-      <Block>
-        <section class="banner_section"
-                 id="merchandise"
-                 tabindex="-1">
-          <img src="/images/elements/inthanin_sticker.png" alt="Banner" class="banner">
-          <router-link :to="{ name: 'merchandise', hash: '#sticker_section' }" class="button">
-            <h2 class="center-text">ดูร้านค้า</h2>
           </router-link>
         </section>
       </Block>
@@ -215,6 +219,12 @@ import RollingText from "@/components/Template/RollingText.vue";
 
   display: flex;
   flex-direction: column;
+}
+
+.page .apparel .billboard .information .price {
+  color: var(--c-gr2);
+  text-align: end;
+  margin-top: auto;
 }
 
 .page .apparel .button {
