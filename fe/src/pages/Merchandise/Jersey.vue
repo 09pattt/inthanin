@@ -67,32 +67,32 @@ import NavbarBlankSpace from "@/components/Template/NavbarBlankSpace.vue";
 
           <tr>
             <td>L</td>
-            <td>40</td>
-            <td>28</td>
+            <td>40"</td>
+            <td>28"</td>
           </tr>
 
           <tr>
             <td>XL</td>
-            <td>42</td>
-            <td>29</td>
+            <td>42"</td>
+            <td>29"</td>
           </tr>
 
           <tr>
             <td>2XL</td>
-            <td>44</td>
-            <td>30</td>
+            <td>44"</td>
+            <td>30"</td>
           </tr>
 
           <tr>
             <td>3XL</td>
-            <td>46</td>
-            <td>31</td>
+            <td>46"</td>
+            <td>31"</td>
           </tr>
 
           <tr>
             <td style="border-bottom: none;">4XL</td>
-            <td style="border-bottom: none;">48</td>
-            <td style="border-bottom: none;">32</td>
+            <td style="border-bottom: none;">48"</td>
+            <td style="border-bottom: none;">32"</td>
           </tr>
           </tbody>
         </table>

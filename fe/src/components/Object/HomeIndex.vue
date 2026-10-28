@@ -10,7 +10,7 @@ interface IndexItem {
 
 const items: readonly IndexItem[] = [
   { id: "apparel", title: "Apparel", description: "เครื่องแต่งกาย" },
-  { id: "sticker", title: "Sticker", description: "สติ๊กเกอร์" },
+  { id: "merchandise", title: "Merchandise", description: "ของที่ระลึก" },
   { id: "gallery", title: "Gallery", description: "ภาพบรรยากาศ" },
   { id: "report", title: "Report", description: "แจ้งปัญหา" },
   { id: "information", title: "Information", description: "ข้อมูลและช่องทางติดต่อ" },
@@ -76,10 +76,6 @@ const items: readonly IndexItem[] = [
 
   display: flex;
   justify-content: space-between;
-}
-
-.index .item .title {
-  /*font-family: Impact, sans-serif;*/
 }
 
 .index .item .description {

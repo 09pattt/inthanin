@@ -44,10 +44,13 @@ import Window from "@/components/Template/Window.vue";
               </p>
             </div>
             <div class="button_area">
-              <p class="comment-text">ดูไซส์/รายละเอียด และสั่งซื้อ</p>
+              <p class="comment-text">ดูไซส์/รายละเอียด</p>
               <div style="width: var(--space-1);"></div>
-              <router-link to="/merchandise/jersey" class="button">
-                <img src="/images/icon/shopping_cart.svg" alt="Checkout">
+              <router-link to="/merchandise/jersey"
+                           class="button"
+                           style="background: var(--c-y1);
+                           filter: drop-shadow(0 0 2rem var(--c-y1));">
+                <img src="/images/icon/add.svg" alt="Checkout">
               </router-link>
             </div>
           </div>
@@ -72,10 +75,13 @@ import Window from "@/components/Template/Window.vue";
               </p>
             </div>
             <div class="button_area">
-              <p class="comment-text">ดูรายละเอียดและสั่งซื้อ</p>
+              <p class="comment-text">ดูรายละเอียด</p>
               <div style="width: var(--space-1);"></div>
-              <router-link to="/merchandise/headband" class="button">
-                <img src="/images/icon/shopping_cart.svg" alt="Checkout">
+              <router-link to="/merchandise/headband"
+                           class="button"
+                           style="background: var(--c-y1);
+                           filter: drop-shadow(0 0 2rem var(--c-y1));">
+                <img src="/images/icon/add.svg" alt="Checkout">
               </router-link>
             </div>
           </div>
@@ -85,7 +91,7 @@ import Window from "@/components/Template/Window.vue";
 
     <ContentFrame padding="var(--space-1)">
       <div style="height: var(--space-1);"></div>
-      <h2 id="sticker_section">Sticker - สติ๊กเกอร์</h2>
+      <h2 id="sticker_section">Merchandise - ของที่ระลึก</h2>
     </ContentFrame>
 
     <Window>
@@ -102,10 +108,10 @@ import Window from "@/components/Template/Window.vue";
                 -
               </p>
             </div>
-            <div class="button_area" style="display: none;"> <!-- ซ่อนไว้ยังซื้อไม่ได้-->
+            <div class="button_area">
               <p class="comment-text">ดูรายละเอียดและสั่งซื้อ</p>
               <div style="width: var(--space-1);"></div>
-              <router-link to="/" class="button">
+              <router-link to="merchandise/merchandise2026" class="button">
                 <img src="/images/icon/shopping_cart.svg" alt="Checkout">
               </router-link>
             </div>

@@ -54,9 +54,9 @@ import RollingText from "@/components/Template/RollingText.vue";
                 <p style="text-indent: 1rem;">
                   เรามากับการเปิดตัว<strong style="color: var(--c-p1);">เสื้อทีมคณะสีอินทนิลปี 2026 </strong>เป็นเสื้อ Jersey สีม่วงมีลวดลายตามธีมของคณะสีในปีนี้
                 </p>
-                <h1 style="color: var(--c-p1); text-align: end; margin-top: auto;">
-                  219.-
-                </h1>
+                <h2 style="color: var(--c-gr1); text-align: end; margin-top: auto;">
+                  SOLD OUT
+                </h2>
                 <p class="comment-text" style="text-align: end;">เลื่อนดูเพิ่มเติม >></p>
               </div>
             </Reveal>
@@ -72,15 +72,15 @@ import RollingText from "@/components/Template/RollingText.vue";
                 <p style="text-indent: 1rem;">
                   ครั้งนี้เรามากับ<strong style="color: var(--c-p1);">ผ้าคาดหัวทีมอินทนิล</strong> ไม่ว่าใครก็จับจองเป็นของตัวเองได้ในราคาเพียง
                 </p>
-                <h1 style="color: var(--c-p1); text-align: end; margin-top: auto;">
-                  59.-
-                </h1>
+                <h2 style="color: var(--c-gr1); text-align: end; margin-top: auto;">
+                  SOLD OUT
+                </h2>
                 <p class="comment-text" style="text-align: end;">กดดูรายละเอียดด้านล่าง</p>
               </div>
             </Reveal>
           </SideSlider>
           <router-link to="/merchandise" class="button">
-            <h2 class="center-text">ดูร้านค้า</h2>
+            <h2 class="center-text">ดูคอลเลกชั่น</h2>
           </router-link>
         </section>
       </Block>
@@ -91,16 +91,16 @@ import RollingText from "@/components/Template/RollingText.vue";
     <Reveal :threshold="0.4">
 
       <ContentFrame padding="var(--space-1)">
-        <h1 class="heading">Sticker</h1>
+        <h1 class="heading">Merchandise</h1>
       </ContentFrame>
 
       <Block>
         <section class="banner_section"
-                 id="sticker"
+                 id="merchandise"
                  tabindex="-1">
           <img src="/images/elements/inthanin_sticker.png" alt="Banner" class="banner">
           <router-link :to="{ name: 'merchandise', hash: '#sticker_section' }" class="button">
-            <h2 class="center-text">ดูเพิ่มเติม</h2>
+            <h2 class="center-text">ดูร้านค้า</h2>
           </router-link>
         </section>
       </Block>
@@ -284,7 +284,7 @@ import RollingText from "@/components/Template/RollingText.vue";
 /* ตั้ง margin ให้สำหรับ sections ที่จะรองรับการเลื่อนจาก index*/
 
 #apparel { scroll-margin-top: 10rem; }
-#sticker { scroll-margin-top: 10rem; }
+#merchandise { scroll-margin-top: 10rem; }
 #gallery { scroll-margin-top: 10rem; }
 #report { scroll-margin-top: 10rem; }
 #information { scroll-margin-top: 10rem; }
