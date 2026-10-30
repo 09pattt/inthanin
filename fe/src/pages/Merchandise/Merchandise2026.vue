@@ -126,6 +126,14 @@ import NavbarBlankSpace from "@/components/Template/NavbarBlankSpace.vue";
           <h2 class="product_name">Sticker</h2>
           <h2 class="price">20.-</h2>
         </div>
+        <div class="information">
+          <h2 class="product_name">Set of Pins</h2>
+          <h2 class="price">20.-</h2>
+        </div>
+        <div class="information">
+          <h2 class="product_name">Starter Pack</h2>
+          <h2 class="price">25.-</h2>
+        </div>
         <p class="center-text comment-text">
           หมายเหตุ: ถ้าติดปัญหาใดๆ สามารถติดต่อได้ที่
           <a href="https://www.instagram.com/inthanin_triamnom?mdxt=MWdiZHl3YWhvenZtZA==">Instagram</a>
