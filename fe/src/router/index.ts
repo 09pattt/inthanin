@@ -60,10 +60,10 @@ const routes: RouteRecordRaw[] = [
     },
     {
         path: '/:pathMatch(.*)*',
-        name: 'home',
-        component: Home,
+        name: 'notfound',
+        component: Notfound,
         meta: {
-            title: 'หน้าหลัก'
+            title: 'ไม่พบหน้า'
         }
     }
 ]

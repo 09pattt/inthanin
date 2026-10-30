@@ -42,7 +42,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <nav class="navbar" ref="navbar" @click="toggleMenu" style="display: none;"> <!-- ปิด NavigationTab เพราะ Demo ไม่ต้องใช้-->
+  <nav class="navbar" ref="navbar" @click="toggleMenu">
     <div class="nav__space">
       <div class="nav__title">
         <!--<router-link to="/home" class="hover__no-bg nav__title_link"></router-link>-->
@@ -50,7 +50,7 @@ onMounted(() => {
         <p>Inthanin</p>
       </div>
       <div class="nav__menu">
-        <div class="nav__menu_button" style="opacity: 0;"> <!-- เอา inline-style ออกถ้าจะแสดง-->
+        <div class="nav__menu_button">
           <p>{{ isMenuOpened ? 'ปิด' : 'เมนู' }}</p>
           <img src="/images/icon/menu.svg" alt="">
         </div>
