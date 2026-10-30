@@ -69,7 +69,8 @@
 /* Assign value variables to element variables (prefers-color-scheme: light)*/
 :root {
   --c-border: var(--c-p1);
-  --c-text-heading: var(--c-p1);
+  --c-text-theme: var(--c-p2);
+  --c-text-heading: var(--c-p2);
   --c-text-comment: var(--c-gr3);
   --c-a: var(--c-p1);
   --c-a-bg: var(--c-t3-p2);
