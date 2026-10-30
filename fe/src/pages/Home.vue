@@ -39,10 +39,69 @@ import RollingText from "@/components/Template/RollingText.vue";
       </ContentFrame>
 
       <Block>
-        <section class="banner_section"
+        <section class="billboard"
                  id="merchandise"
                  tabindex="-1">
-          <img src="/images/elements/inthanin_sticker.png" alt="Banner" class="banner">
+          <SideSlider height="250px" class="slider">
+            <Reveal transform-in="translateY(20%)" class="product_block">
+              <div class="preview_wrapper">
+                <img src="/images/elements/all_merchandise.png" alt="preview" class="preview">
+              </div>
+              <div class="information">
+                <h2 style="background: var(--c-p3); color: var(--c-w3); text-align: center;">
+                  2026 Merchandise
+                </h2>
+                <p>
+                  ครั้งนี้เรามีของน่ารัก ๆ สำหรับทุกคนอีกครั้ง ใครที่พลาดเสื้อและผ้าคาดหัว<strong style="color: var(--c-p1);">ทีมอินทนิล</strong> วันนี้ยังพรี-ออเดอร์ของที่ระลึกกันได้!
+                </p>
+                <h3 class="price comment-text">
+                  เลื่อนดูเพิ่มเติม >>
+                </h3>
+                <!--
+                <p class="comment-text" style="text-align: end;">เลื่อนดูเพิ่มเติม >></p>
+                -->
+              </div>
+            </Reveal>
+            <Reveal transform-in="translateY(20%)" class="product_block">
+              <div class="preview_wrapper">
+                <img src="/images/elements/mockup_pins.png" alt="preview" class="preview">
+              </div>
+              <div class="information">
+                <h2 style="background: var(--c-p3); color: var(--c-w3); text-align: center;">
+                  Inthanin Pin
+                </h2>
+                <p>
+                  อันนี้เป็น<strong style="color: var(--c-p1);">เข็มกลัดอินทนิล</strong> มีให้เลือกจับจองกัน 3 แบบด้วยกัน เป็นเข็มกลีดขนาด 32 มิลลิเมตร
+                </p>
+                <h2 class="price join-text">
+                  9.-
+                </h2>
+                <!--
+                <p class="comment-text" style="text-align: end;">เลื่อนดูเพิ่มเติม >></p>
+                -->
+              </div>
+            </Reveal>
+
+            <Reveal transform-in="translateY(20%)" class="product_block">
+              <div class="preview_wrapper">
+                <img src="/images/elements/mockup_stickers.png" alt="preview" class="preview">
+              </div>
+              <div class="information">
+                <h2 style="background: var(--c-p3); color: var(--c-w3); text-align: center;">
+                  Inthanin Sticker
+                </h2>
+                <p>
+                  <strong style="color: var(--c-p1);">สติ๊กเกอร์อินทนิล</strong> มีให้เลือกกันได้ 2 แบบ เป็นแผ่นสติ๊กเกอร์ขนาด A6
+                </p>
+                <h2 class="price">
+                  20.-
+                </h2>
+                <!--
+                <p class="comment-text" style="text-align: end;">กดดูรายละเอียดด้านล่าง</p>
+                -->
+              </div>
+            </Reveal>
+          </SideSlider>
           <router-link to="/merchandise" class="button">
             <h2 class="center-text">ดูเพิ่มเติม/สั่งซื้อ</h2>
           </router-link>
@@ -59,10 +118,10 @@ import RollingText from "@/components/Template/RollingText.vue";
       </ContentFrame>
 
       <Block>
-        <section class="apparel"
+        <section class="billboard"
                  id="apparel"
                  tabindex="-1">
-          <SideSlider height="250px" class="billboard">
+          <SideSlider height="250px" class="slider">
             <Reveal transform-in="translateY(20%)" class="product_block">
               <div class="preview_wrapper">
                 <img src="/images/elements/jersey.png" alt="preview" class="preview">
@@ -71,7 +130,7 @@ import RollingText from "@/components/Template/RollingText.vue";
                 <h2 style="background: var(--c-p3); color: var(--c-w3); text-align: center;">
                   Inthanin Jerseyyyyy
                 </h2>
-                <p style="text-indent: 1rem;">
+                <p>
                   เรามากับการเปิดตัว<strong style="color: var(--c-p1);">เสื้อทีมคณะสีอินทนิลปี 2026 </strong>เป็นเสื้อ Jersey สีม่วงมีลวดลายตามธีมของคณะสีในปีนี้
                 </p>
                 <h2 class="price">
@@ -91,7 +150,7 @@ import RollingText from "@/components/Template/RollingText.vue";
                 <h2 style="background: var(--c-p3); color: var(--c-w3); text-align: center;">
                   Inthanin Headband
                 </h2>
-                <p style="text-indent: 1rem;">
+                <p>
                   ครั้งนี้เรามากับ<strong style="color: var(--c-p1);">ผ้าคาดหัวทีมอินทนิล</strong> ไม่ว่าใครก็จับจองเป็นของตัวเองได้ในราคาเพียง
                 </p>
                 <h2 class="price">
@@ -183,7 +242,7 @@ import RollingText from "@/components/Template/RollingText.vue";
   flex-direction: column;
 }
 
-.page .apparel {
+.page .billboard {
   width: 100%;
   height: fit-content;
   background: var(--c-main-bg2);
@@ -192,14 +251,14 @@ import RollingText from "@/components/Template/RollingText.vue";
   grid-template-rows: auto;
 }
 
-.page .apparel .billboard .product_block {
+.page .billboard .slider .product_block {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: space-evenly;
 }
 
-.page .apparel .billboard .preview_wrapper {
+.page .billboard .slider .preview_wrapper {
   height: 100%;
   width: fit-content;
 
@@ -208,12 +267,12 @@ import RollingText from "@/components/Template/RollingText.vue";
   align-items: center;
 }
 
-.page .apparel .billboard .preview {
+.page .billboard .slider .preview {
   height: 200px;
   filter: drop-shadow(0 0 2rem var(--c-t1-p2));
 }
 
-.page .apparel .billboard .information {
+.page .billboard .slider .information {
   width: 200px;
   height: 100%;
 
@@ -221,13 +280,17 @@ import RollingText from "@/components/Template/RollingText.vue";
   flex-direction: column;
 }
 
-.page .apparel .billboard .information .price {
-  color: var(--c-gr2);
+.page .billboard .slider .information p {
+  text-indent: 1rem;
+}
+
+.page .billboard .slider .information .price {
+  color: var(--c-p1);
   text-align: end;
   margin-top: auto;
 }
 
-.page .apparel .button {
+.page .billboard .button {
   background: var(--c-p3);
   color: var(--c-w3);
 }

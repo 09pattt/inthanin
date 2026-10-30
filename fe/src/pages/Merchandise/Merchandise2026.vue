@@ -11,9 +11,8 @@ import NavbarBlankSpace from "@/components/Template/NavbarBlankSpace.vue";
       </div>
       <div class="container">
         <ContentFrame>
-          <h1 class="title center-text">Merchandise</h1>
           <div>
-            <img src="/images/elements/merchandise2026.png" alt="Preview" class="preview">
+            <img src="/images/elements/all_merchandise.png" alt="Preview" class="preview">
           </div>
         </ContentFrame>
       </div>

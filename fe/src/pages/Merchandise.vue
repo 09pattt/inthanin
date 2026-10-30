@@ -14,7 +14,7 @@ import Window from "@/components/Template/Window.vue";
       <div style="flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center;">
         <ContentFrame>
           <div style="padding: 0 2rem;">
-            <img src="/images/elements/merchandise2026.png" alt="" style="width: 100%; filter: drop-shadow(1rem 1rem 8px var(--c-t2-bl1));">
+            <img src="/images/elements/all_collection.png" alt="" style="width: 100%; filter: drop-shadow(1rem 1rem 8px var(--c-t2-bl1));">
           </div>
         </ContentFrame>
       </div>
@@ -32,15 +32,15 @@ import Window from "@/components/Template/Window.vue";
     <Window>
       <section class="product_window">
         <header>
-          <h2>Pin & Sticker</h2>
+          <h2>Pins & Stickers</h2>
           <h2>เริ่มต้น 9.-</h2>
         </header>
         <Reveal class="container" transform-in="translateX(20%)">
-          <img src="/images/elements/inthanin_stickers_mockup.png" alt="Preview" class="preview">
+          <img src="/images/elements/all_merchandise.png" alt="Preview" class="preview">
           <div class="content">
             <div class="information">
               <p style="text-indent: 1rem;">
-                -
+                <strong style="color: var(--c-p1);">ของที่ระลึก</strong>น่ารัก ๆ มีมาให้ทุกคนจับจองเป็นของตัวเองได้ถึงวันจันทร์ที่ <strong style="color: var(--c-y1);">2 พฤศจิกายน</strong> เท่านั้นนน!
               </p>
             </div>
             <div class="button_area">
