@@ -20,6 +20,84 @@ import NavbarBlankSpace from "@/components/Template/NavbarBlankSpace.vue";
 
     <ContentFrame padding="var(--space-1)">
       <section class="details">
+        <h2>คำอธิบาย</h2>
+        <p style="text-indent: 1rem;">นี่เป็นอีกหนึ่ง Collection ประจำปี 2026 อย่าลืมมาซื้อเข็มกลัดและสติ๊กเกอร์ทีมอินทนิลในราคาน่ารักๆ ก่อนที่จะหมดเขตพรี-ออเดอร์ในวันที่ 2 พฤศจิกายนนี้ หมดแล้วหมดเลยนะคร้าบบบ</p>
+      </section>
+
+      <br>
+      <hr>
+      <br>
+
+      <section class="product_block">
+        <img src="/images/elements/preview_pins.png" alt="Pins" class="preview">
+        <h2>Inthanin Pin</h2>
+        <h3>เข็มกลัดอินทนิล</h3>
+        <ul>
+          <li>เข็มกลัดจะมีทั้งหมด 3 แบบดังรูปตัวอย่าง</li>
+          <li>เป็นเข็มกลัดขนาด 32 มิลลิเมตร</li>
+        </ul>
+        <div class="price">
+          <h3>ราคาต่อชิ้น</h3>
+          <h2>9.-</h2>
+        </div>
+      </section>
+
+      <br>
+      <hr>
+      <br>
+
+      <section class="product_block">
+        <img src="/images/elements/preview_stickers.png" alt="Pins" class="preview">
+        <h2>Inthanin Sticker</h2>
+        <h3>สติ๊กเกอร์อินทนิล</h3>
+        <ul>
+          <li>สติ๊กเกอร์จะมีทั้งหมด 2 แบบดังรูปตัวอย่าง</li>
+          <li>เป็นแผ่นสติ๊กเกอร์ขนาด A6</li>
+        </ul>
+        <div class="price">
+          <h3>ราคาต่อแผ่น</h3>
+          <h2>20.-</h2>
+        </div>
+      </section>
+
+      <br>
+      <hr>
+      <br>
+
+      <section class="product_block">
+        <h2>Set of Pins</h2>
+        <h3>เซตเข็มกลัด</h3>
+        <ul>
+          <li>จะได้เข็มกลัดครบทั้ง 3 แบบดังรูปข้างต้น</li>
+        </ul>
+        <div class="price">
+          <h3>ราคาต่อเซต</h3>
+          <h2>20.-</h2>
+        </div>
+      </section>
+
+      <br>
+      <hr>
+      <br>
+
+      <section class="product_block">
+        <h2>Starter Pack</h2>
+        <h3>เซตเข็มกลัดและสติ๊กเกอร์</h3>
+        <ul>
+          <li>จะได้เข็มกลัด 1 แบบจากเซตที่จัดให้</li>
+          <li>จะได้สติ๊กเกอร์ 1 แบบจากเซตที่จัดให้</li>
+        </ul>
+        <div class="price">
+          <h3>ราคาต่อเซต</h3>
+          <h2>25.-</h2>
+        </div>
+      </section>
+
+      <br>
+      <hr>
+      <br>
+
+      <section class="details">
         <h2>รายละเอียดการสั่งซื้อ</h2>
         <ul>
           <li>ผู้สั่งซื้อไม่จำเป็นต้องอยู่ในคณะสีอินทนิล</li>
@@ -107,6 +185,29 @@ import NavbarBlankSpace from "@/components/Template/NavbarBlankSpace.vue";
 
 .page .details ul {
   padding-left: 2rem;
+}
+
+.page .product_block {
+  width: 100%;
+}
+
+.page .product_block .preview {
+  width: 100%;
+}
+
+.page .product_block ul {
+  padding-left: 2rem;
+}
+
+.page .product_block .price {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.page .product_block .price h2 {
+  margin-left: var(--space-1);
+  color: var(--c-p1);
 }
 
 /* Table */
