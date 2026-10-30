@@ -1,8 +1,5 @@
 <script setup>
-import NavbarBlankSpace from "@/components/Template/NavbarBlankSpace.vue";
 import ContentFrame from "@/components/Template/ContentFrame.vue";
-import Block from "@/components/Template/Block.vue";
-import SideSlider from "@/components/Template/SideSlider.vue";
 import Reveal from "@/components/Property/Reveal.vue";
 import HomeIndex from "@/components/Object/HomeIndex.vue";
 import RollingText from "@/components/Template/RollingText.vue";
@@ -15,7 +12,9 @@ import RollingText from "@/components/Template/RollingText.vue";
 
     <header class="header">
       <div style="flex: 0 0 auto;">
+        <!-- เอาพื้นที่ออกถ้าไม่มี NavigationTab แสดงผล
         <NavbarBlankSpace/>
+        -->
       </div>
       <div style="flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center;">
         <ContentFrame>
