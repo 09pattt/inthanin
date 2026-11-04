@@ -27,7 +27,7 @@ const copyTel = (number) => {
       <h2>เกี่ยวกับเว็บไซต์</h2>
       <p><strong>โดเมน : </strong>(www.)inthanin.xyz</p>
       <p><strong>เวอร์ชั่น : </strong>1.0.1 (Release)</p>
-      <p><strong>วันที่อัปเดต : </strong>31 Oct. 2026</p>
+      <p><strong>วันที่อัปเดต : </strong>4 Nov. 2026</p>
       <p><strong>Repository (ไฟล์ซอฟต์แวร์และเอกสาร) : </strong><a href="https://github.com/09pattt/inthanin" target="_blank">@github.com/09pattt/inthanin</a></p>
       <p><strong>ผู้พัฒนา : </strong>นายณภัทร พรภัทรนนท์</p>
       <p><strong>โทรศัพท์ : </strong><a @click="copyTel('0863629871')" style="color: var(--c-y1); cursor: pointer;">086 362 9871</a></p>
