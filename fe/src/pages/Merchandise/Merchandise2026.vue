@@ -116,7 +116,7 @@ import NavbarBlankSpace from "@/components/Template/NavbarBlankSpace.vue";
         <h1>สรุปรายการ</h1>
         <div class="indicator">
           <p class="comment-text">รายการ</p>
-          <p class="comment-text">ราคาต่อชิ้น</p>
+          <p class="comment-text">ราคา</p>
         </div>
         <div class="information">
           <h2 class="product_name">Pin</h2>
@@ -135,11 +135,14 @@ import NavbarBlankSpace from "@/components/Template/NavbarBlankSpace.vue";
           <h2 class="price">25.-</h2>
         </div>
         <p class="center-text comment-text">
-          หมายเหตุ: ถ้าติดปัญหาใดๆ สามารถติดต่อได้ที่
+          <!-- ปิดไม่ให้พรีออเดอร์แล้ว
+          หมายเหตุ: หากต้องการสั่งเสื้อมากกว่า 5 ตัว สามารถติดต่อได้ที่
           <a href="https://www.instagram.com/inthanin_triamnom?mdxt=MWdiZHl3YWhvenZtZA==">Instagram</a>
+          -->
+          รายการนี้ปิดการสั่งซื้อรอบ พรี-ออเดอร์ ไปแล้ว
         </p>
         <div class="button">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdN8-leTfHI7j2nB4vLe1tVGqpIBpdCsMdGbTv5do47bvCO3g/viewform"
+          <a href=""
              target="_blank">
             <h3>พรี-ออเดอร์</h3>
           </a>
@@ -176,9 +179,6 @@ import NavbarBlankSpace from "@/components/Template/NavbarBlankSpace.vue";
   justify-content: center;
 }
 
-.page .header .title {
-  font-family: Impact, sans-serif;
-}
 
 .page .header .preview {
   width: 100%;
@@ -274,14 +274,13 @@ import NavbarBlankSpace from "@/components/Template/NavbarBlankSpace.vue";
 .page .purchasing .button a {
   width: 100%;
   border-radius: var(--space-1);
-  background: var(--c-w3); /* เปลี่ยนกลับเป็น var(--c-gr2) ถ้าปิดให้ซื้อ*/
+  background: var(--c-gr2); /* เปลี่ยนกลับเป็น var(--c-w3) ถ้าเปิดให้ซื้อ*/
   color: var(--c-bl3);
   display: flex;
   justify-content: center;
   align-items: center;
 
-  /* ถ้าปิดไม่ให้ซื้อแล้ว
+  /* ถ้าปิดไม่ให้ซื้อแล้ว */
   pointer-events: none;
-  */
 }
 </style>

@@ -74,7 +74,7 @@ import RollingText from "@/components/Template/RollingText.vue";
                   อันนี้เป็น<strong style="color: var(--c-p1);">เข็มกลัดอินทนิล</strong> มีให้เลือกจับจองกัน 3 แบบด้วยกัน เป็นเข็มกลีดขนาด 32 มิลลิเมตร
                 </p>
                 <h2 class="price join-text">
-                  9.-
+                  Sold Out
                 </h2>
                 <!--
                 <p class="comment-text" style="text-align: end;">เลื่อนดูเพิ่มเติม >></p>
@@ -94,7 +94,7 @@ import RollingText from "@/components/Template/RollingText.vue";
                   <strong style="color: var(--c-p1);">สติ๊กเกอร์อินทนิล</strong> มีให้เลือกกันได้ 2 แบบ เป็นแผ่นสติ๊กเกอร์ขนาด A6
                 </p>
                 <h2 class="price">
-                  20.-
+                  Sold Out
                 </h2>
                 <!--
                 <p class="comment-text" style="text-align: end;">กดดูรายละเอียดด้านล่าง</p>
@@ -103,7 +103,7 @@ import RollingText from "@/components/Template/RollingText.vue";
             </Reveal>
           </SideSlider>
           <router-link to="/merchandise" class="button">
-            <h2 class="center-text">ดูเพิ่มเติม/สั่งซื้อ</h2>
+            <h2 class="center-text">ดูเพิ่มเติม</h2>
           </router-link>
         </section>
       </Block>
